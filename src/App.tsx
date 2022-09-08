@@ -1,26 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './css/index.css'
+import { Routes, Route } from 'react-router-dom'
+import Navigation from './components/Layout/Navigation/Navigation';
+import MAIN_PAGE from './components/MAIN_PAGE/MAIN_PAGE';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	// po boku social fixed
+   return (
+		<div className="App">
+
+			<Navigation />
+			
+			<Routes>
+
+				<Route path='/' element={ <MAIN_PAGE /> } />
+
+			</Routes>
+
+		</div>
+   )
 }
 
 export default App;

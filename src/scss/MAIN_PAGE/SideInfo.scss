@@ -1,0 +1,148 @@
+@import '../config';
+
+section.side-info {
+   @include Flex(sa, c);
+   height: 100vh;
+
+   figure.image-div {
+      width: 50%;
+
+      figure {
+         @include FullSize;
+
+         img {
+            @include FullSize;
+            object-fit: cover;
+         }
+      }
+   }
+
+   article.text-container {
+      width: 40%;
+
+      h2 {
+         font-family: 'Comfortaa', cursive;
+         font-size: 2.75rem;
+         font-weight: 700;
+         margin-bottom: .75em;
+      }
+
+      p.tag {
+         font-weight: 700;
+         border-top: 1px solid rgb(195, 195, 195);
+         border-bottom: 1px solid rgb(195, 195, 195);
+         font-family: 'Comfortaa', cursive;
+         font-size: 1.1rem;
+
+         span.icon {
+            @include Rectangle(25px);
+            color: rgb(195, 195, 195);
+
+            svg { @include FullSize; }
+         }
+      }
+
+      button {
+         margin-top: 3em;
+         padding: .75em 2.5em;
+         border-radius: .3em;
+         outline: 0;
+         border: 2px solid purple;
+         cursor: pointer;
+         background: none;
+         transition: .3s;
+
+         label {
+            font-size: 1.1rem;
+            color: purple;
+            font-weight: 500;
+            font-family: 'Sora', sans-serif;
+            transition: .3s;
+         }
+
+         &:hover {
+            background: purple;
+            
+            label { color: $clr-white; }
+         }
+      }
+   }
+
+   &.first {
+      p {
+         padding: 1.75em .25em 2em .25em;
+      }
+
+      span.icon {
+         margin-bottom: .5em;
+      }
+   }
+
+   &.second {
+      section.cards {
+         @include Flex(sb, c);
+         margin-top: 3em;
+         align-items: stretch;
+
+         div.card {
+            width: 30%;
+            background: royalblue;
+            color: $clr-white;
+            border-radius: .75em;
+            @include Flex(sb, c);
+            flex-direction: column;
+            padding: 1em .5em;
+            transition: .3s;
+            cursor: pointer;
+
+            div {
+               @include Flex(c, c);
+               flex-direction: column;
+               margin-bottom: 2em;
+
+               h3 {
+                  font-weight: 800;
+                  font-size: 1.25rem;
+               }
+   
+               span {
+                  @include Rectangle(40px);
+   
+                  svg { @include FullSize; }
+               }
+            }
+
+            p {
+               text-align: center;
+               font-size: .9rem;
+            }
+
+            &:hover {
+               transform: scale(1.15);
+            }
+         }
+      }
+
+      h2 {
+         color: $clr-white;
+         text-shadow: 0 0 4px black;
+         text-align: right;
+      }
+
+      figure {
+         border-radius: 1em;
+         overflow: hidden;
+      }
+
+      span.icon {
+         margin: 0 0 .5em auto;
+      }
+
+      p.tag {
+         text-shadow: 0 0 2px white;
+         background: rgba(235, 235, 235, .8);
+         padding: 1.75em 1em 2em 1em;
+         text-align: right;
+      }
+   }
+}

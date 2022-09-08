@@ -1,0 +1,68 @@
+section.side-info.first {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+}
+section.side-info.first figure.image-div {
+  width: 50%;
+}
+section.side-info.first figure.image-div figure {
+  width: 100%;
+  height: 100%;
+}
+section.side-info.first figure.image-div figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+section.side-info.first section.text-container {
+  width: 40%;
+}
+section.side-info.first section.text-container h2 {
+  font-family: "Comfortaa", cursive;
+  font-size: 2.75rem;
+  font-weight: 700;
+  margin-bottom: 0.75em;
+}
+section.side-info.first section.text-container p {
+  font-weight: 500;
+  border-top: 1px solid rgb(195, 195, 195);
+  border-bottom: 1px solid rgb(195, 195, 195);
+  padding: 1.75em 0.25em 2em 0.25em;
+  font-family: "Comfortaa", cursive;
+}
+section.side-info.first section.text-container p span.icon {
+  display: block;
+  height: 20px;
+  width: 20px;
+  margin-bottom: 0.5em;
+  color: rgb(195, 195, 195);
+}
+section.side-info.first section.text-container p span.icon svg {
+  width: 100%;
+  height: 100%;
+}
+section.side-info.first section.text-container button {
+  margin-top: 3em;
+  padding: 0.75em 2.5em;
+  border-radius: 0.3em;
+  outline: 0;
+  border: 2px solid purple;
+  cursor: pointer;
+  background: none;
+  transition: 0.3s;
+}
+section.side-info.first section.text-container button label {
+  font-size: 1.1rem;
+  color: purple;
+  font-weight: 500;
+  font-family: "Sora", sans-serif;
+  transition: 0.3s;
+}
+section.side-info.first section.text-container button:hover {
+  background: purple;
+}
+section.side-info.first section.text-container button:hover label {
+  color: rgb(245, 245, 245);
+}

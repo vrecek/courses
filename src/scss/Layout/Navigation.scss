@@ -1,0 +1,45 @@
+@import '../config';
+
+nav.layout-navigation {
+   @include Flex(sb, c);
+   height: $navHeight;
+   padding: .25em 2em .25em 3em;
+   @include Absolute(0, 0);
+   width: 100%;
+   background: rgb(245, 245, 245);
+
+   ul.list {
+      list-style: none;
+      @include Flex(none, c);
+
+      li {
+         margin-left: 2em;
+         font-weight: 500;
+         font-size: .9rem;
+         transition: .3s;
+         cursor: pointer;
+
+         &.register {
+            background: royalblue;
+            border-radius: 1em;
+            padding: .5em 1em;
+            color: $clr-white;
+            margin-left: 3em;
+         }
+
+         &.login {
+            font-weight: 700;
+            margin-left: 1em;
+         }
+      }
+   }
+
+   figure.logo {
+      height: 100%;
+      overflow: hidden;
+
+      img {
+         height: 100%;
+      }
+   }
+}

@@ -1,0 +1,45 @@
+nav.layout-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 0.25em 2em 0.25em 3em;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: auto;
+  right: auto;
+  width: 100%;
+  background: rgb(245, 245, 245);
+}
+nav.layout-navigation ul.list {
+  list-style: none;
+  display: flex;
+  justify-content: none;
+  align-items: center;
+}
+nav.layout-navigation ul.list li {
+  margin-left: 2em;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: 0.3s;
+  cursor: pointer;
+}
+nav.layout-navigation ul.list li.register {
+  background: royalblue;
+  border-radius: 1em;
+  padding: 0.5em 1em;
+  color: rgb(245, 245, 245);
+  margin-left: 3em;
+}
+nav.layout-navigation ul.list li.login {
+  font-weight: 700;
+  margin-left: 1em;
+}
+nav.layout-navigation figure.logo {
+  height: 100%;
+  overflow: hidden;
+}
+nav.layout-navigation figure.logo img {
+  height: 100%;
+}
