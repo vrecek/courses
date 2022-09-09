@@ -7,6 +7,7 @@ nav.layout-navigation {
    @include Absolute(0, 0);
    width: 100%;
    background: rgb(245, 245, 245);
+   z-index: 99;
 
    ul.list {
       list-style: none;

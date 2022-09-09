@@ -1,0 +1,26 @@
+ul.layout-socials {
+  list-style: none;
+  position: fixed;
+  left: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 99;
+}
+ul.layout-socials li {
+  display: block;
+  height: 20px;
+  width: 20px;
+  color: grey;
+  transition: 0.3s;
+  cursor: pointer;
+}
+ul.layout-socials li:not(:last-child) {
+  margin-bottom: 0.5em;
+}
+ul.layout-socials li svg {
+  width: 100%;
+  height: 100%;
+}
+ul.layout-socials li:hover {
+  transform: scale(1.1);
+}

@@ -8,6 +8,11 @@ $navHeight: 60px;
    height: $size;
 }
 
+@mixin Center($val) {
+   width: $val;
+   margin: 0 auto;
+}
+
 @mixin Clamp($min, $vw, $max) {
    font-size: clamp(#{$min}rem, #{$vw}vw, #{$max}rem);
 }

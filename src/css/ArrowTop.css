@@ -1,0 +1,32 @@
+div.layout-arrow {
+  position: fixed;
+  z-index: 99;
+  right: 5px;
+  bottom: 5px;
+  display: block;
+  height: 30px;
+  width: 30px;
+  background: royalblue;
+  border-radius: 0.2em;
+  pointer-events: none;
+  opacity: 0;
+  cursor: pointer;
+  transition: 0.2s;
+}
+div.layout-arrow span {
+  width: 100%;
+  height: 100%;
+  display: block;
+  color: rgb(245, 245, 245);
+  transition: 0.2s;
+}
+div.layout-arrow span svg {
+  width: 100%;
+  height: 100%;
+}
+div.layout-arrow:hover {
+  background: #214cce;
+}
+div.layout-arrow:hover span {
+  transform: scale(1.2);
+}

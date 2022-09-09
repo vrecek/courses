@@ -1,0 +1,31 @@
+@import '../config';
+
+div.layout-arrow {
+   position: fixed;
+   z-index: 99;
+   right: 5px;
+   bottom: 5px;
+   @include Rectangle(30px);
+   background: royalblue;
+   border-radius: .2em;
+   pointer-events: none;
+   opacity: 0;
+   cursor: pointer;
+   transition: .2s;
+
+   span {
+      @include FullSize(100%);
+      display: block;
+      color: $clr-white;
+      transition: .2s;
+
+      svg {
+         @include FullSize;
+      }
+   }
+
+   &:hover {
+      background: darken(royalblue, 10%);
+      span { transform: scale(1.2); }
+   }
+}

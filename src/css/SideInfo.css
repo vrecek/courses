@@ -44,7 +44,7 @@ section.side-info article.text-container p.tag span.icon svg {
 }
 section.side-info article.text-container button {
   margin-top: 3em;
-  padding: 0.75em 2.5em;
+  padding: 1em 2.5em;
   border-radius: 0.3em;
   outline: 0;
   border: 2px solid purple;
@@ -80,7 +80,7 @@ section.side-info.second section.cards {
 }
 section.side-info.second section.cards div.card {
   width: 30%;
-  background: royalblue;
+  background: linear-gradient(to bottom right, #753EE2, #96A4FF);
   color: rgb(245, 245, 245);
   border-radius: 0.75em;
   display: flex;
@@ -121,18 +121,16 @@ section.side-info.second section.cards div.card:hover {
 section.side-info.second h2 {
   color: rgb(245, 245, 245);
   text-shadow: 0 0 4px black;
-  text-align: right;
 }
 section.side-info.second figure {
   border-radius: 1em;
   overflow: hidden;
 }
 section.side-info.second span.icon {
-  margin: 0 0 0.5em auto;
+  margin-bottom: 0.5em;
 }
 section.side-info.second p.tag {
   text-shadow: 0 0 2px white;
   background: rgba(235, 235, 235, 0.8);
   padding: 1.75em 1em 2em 1em;
-  text-align: right;
 }

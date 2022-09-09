@@ -10,7 +10,7 @@ const Cards = () => {
 
          <OneCard header='Frontend' icon={ <BiPaint /> } para='Learn how to design and create different webistes' />
          <OneCard header='Backend' icon={ <HiOutlineServer /> } para='Learn how backend works and how to create a server' />
-         <OneCard header='Language' icon={ <SiTypescript /> } para="Learn language concepts and its usage" />
+         <OneCard header='Language' icon={ <SiTypescript /> } para="Learn core language concepts and its usage" />
 
       </section>
    )

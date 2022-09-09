@@ -1,6 +1,6 @@
 import React from 'react'
 import Button from '../../../Common/Button'
-import { ImParagraphLeft } from 'react-icons/im'
+import {ImParagraphLeft} from 'react-icons/im'
 import PTag from '../PTag'
 
 const FirstParagraph = () => {
