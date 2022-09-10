@@ -1,0 +1,110 @@
+section.opinions {
+  min-height: 100vh;
+  padding: 0 2em;
+  padding-bottom: 5em;
+}
+section.opinions h1 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1em;
+}
+section.opinions section.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
+}
+section.opinions section.container article {
+  display: flex;
+  justify-content: space-between;
+  align-items: none;
+  flex-direction: column;
+  width: 30%;
+  margin: 1em;
+  background: rgb(162, 21, 162);
+  border-radius: 0.25em;
+  padding: 2em;
+  color: rgb(245, 245, 245);
+  position: relative;
+}
+section.opinions section.container article span.bg-icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  transform: translate(-50%, -50%);
+  color: rgb(245, 245, 245);
+  opacity: 0.05;
+  display: block;
+  height: 80%;
+  width: 80%;
+}
+section.opinions section.container article span.bg-icon svg {
+  width: 100%;
+  height: 100%;
+}
+section.opinions section.container article div {
+  position: relative;
+  z-index: 3;
+}
+section.opinions section.container article div.text {
+  margin: 2em 0 4em 0;
+}
+section.opinions section.container article div.text h3 {
+  font-weight: 800;
+  font-size: 1.5rem;
+  margin-bottom: 0.5em;
+}
+section.opinions section.container article div.text p {
+  font-family: "Comfortaa", cursive;
+  font-weight: 600;
+}
+section.opinions section.container article div.rating {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+section.opinions section.container article div.rating span {
+  display: block;
+  height: 30px;
+  width: 30px;
+}
+section.opinions section.container article div.rating span svg {
+  width: 100%;
+  height: 100%;
+}
+section.opinions section.container article div.rating span.active {
+  color: yellow;
+}
+section.opinions section.container article div.user {
+  display: flex;
+}
+section.opinions section.container article div.user figure {
+  border-radius: 50%;
+  width: 15%;
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+section.opinions section.container article div.user figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+section.opinions section.container article div.user div {
+  display: flex;
+  justify-content: center;
+  align-items: none;
+  flex-direction: column;
+  margin-left: 1em;
+}
+section.opinions section.container article div.user div h4.name {
+  font-weight: 700;
+}
+section.opinions section.container article div.user div h5.who {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.85rem;
+}

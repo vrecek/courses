@@ -1,5 +1,104 @@
 @import '../config';
 
 section.preview {
-   height: 100vh;
+   height: 80vh;
+   @include Flex(c, c);
+   position: relative;
+
+   article.text,
+   section.slider {
+      width: 30%;
+   }
+
+   article.text {
+      border-left: 3px solid purple;
+      height: 40vh;
+      padding: .5em 0 .5em 1em;
+      margin-right: 1em;
+      @include Flex(sb, none);
+      flex-direction: column;
+
+      ul {
+         display: flex;
+
+         li {
+            margin-right: .75em;
+            @include Rectangle(30px);
+            cursor: pointer;
+            transition: .3s;
+
+            svg { @include FullSize; }
+         
+            &:hover {
+               transform: scale(1.15);
+            }
+         }
+      }
+
+      h1 {
+         font-size: 1.75rem;
+         font-weight: 600;
+         margin-bottom: .5em;
+      }
+
+      p {
+         font-family: 'Comfortaa', cursive;
+         font-weight: 700;
+         line-height: 1.5em;
+      }
+   }
+
+   section.slider {
+      position: relative;
+
+      ul {
+         position: absolute;
+         left: 50%;
+         top: 100%;
+         transform: translateX(-50%) translateY(100%);
+         display: flex;
+
+         li {
+            border-radius: 50%;
+            cursor: pointer;
+            transition: .3s;
+            margin: 0 .25em;
+            @include Rectangle(16px);
+            background: rgb(161, 161, 161);
+
+            &.active {
+               pointer-events: none;
+               background: royalblue;
+            }
+
+            &:hover {
+               transform: scale(1.1);
+               background: darken(gray, 5%);
+            }
+         }
+      }
+
+      div.wrap {
+         overflow: hidden;
+      }
+
+      div.moving {
+         transition: .5s;
+         width: inherit;
+         display: flex;
+
+         figure {
+            flex-shrink: 0;
+            width: 100%;
+            height: 40vh;
+            overflow: hidden;
+
+            img {
+               @include FullSize;
+               object-fit: cover;
+               border-radius: .2em;
+            }
+         }
+      }
+   }
 }

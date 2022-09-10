@@ -1,0 +1,88 @@
+@import '../config';
+
+section.usage {
+   height: 100vh;
+   padding: 0 2em;
+   margin-bottom: 5em;
+   @include Flex(sa, c);
+   background-image: url('../images/usage.jpg');
+   background-size: cover;
+
+   section.options,
+   section.right-element {
+      height: 85%;
+   }
+
+   section.options {
+      width: 45%;
+      background: rgb(8, 27, 86);
+      padding: 2em;
+      color: $clr-white;
+      border-radius: .5em;
+
+      article.option {
+         border-bottom: 2px solid grey;
+         margin-bottom: 5em;
+         padding-bottom: 1em;
+
+         section.hidden-informations {
+            transition: .3s;
+            height: 0;
+            overflow: hidden;
+            display: none;
+
+            span.icon {
+               @include Rectangle(25px);
+               margin-bottom: .25em;
+
+               svg { @include FullSize; }
+            }
+
+            p {
+               line-height: 1.5em;
+               color: #dfdfdf;
+            }
+         }
+
+
+         div.wrap {
+            @include Flex(sb, c);
+            cursor: pointer;
+            margin-bottom: 2em;
+
+            h2 {
+               pointer-events: none;
+               font-weight: 700;
+               font-family: 'Comfortaa', cursive;
+               font-size: 1.5rem;
+            }
+
+            span {
+               pointer-events: none;
+               @include Rectangle(30px);
+               transform: rotate(180deg);
+               transition: .3s;
+
+               svg { @include FullSize; }
+            }
+         }
+      }
+   }
+
+   section.right-element {
+      width: 40%;
+      background: rgb(8, 27, 86);
+      @include Flex(c, c);
+      border-radius: .5em;
+
+      figure {
+         width: 85%;
+         overflow: hidden;
+
+         img {
+            width: 100%;
+            border-radius: .5em;
+         }
+      }
+   }
+}

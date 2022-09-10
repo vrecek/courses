@@ -4,6 +4,9 @@ import Header from './Header/Header'
 import SecondSideInfo from './SideInformations/Second/SecondSideInfo'
 import Pricing from './Pricing/Pricing'
 import Preview from './Preview/Preview'
+import Pros from './Pros/Pros'
+import Opinions from './Opinions/Opinions'
+import Usage from './Usage/Usage'
 
 const MAIN_PAGE = () => {
    return (
@@ -14,6 +17,9 @@ const MAIN_PAGE = () => {
          <SecondSideInfo />
          <Pricing />
          <Preview />
+         <Pros />
+         <Usage />
+         <Opinions />
 
       </main>
    )

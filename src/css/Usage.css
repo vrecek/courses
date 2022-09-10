@@ -1,0 +1,87 @@
+section.usage {
+  height: 100vh;
+  padding: 0 2em;
+  margin-bottom: 5em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-image: url("../images/usage.jpg");
+  background-size: cover;
+}
+section.usage section.options,
+section.usage section.right-element {
+  height: 85%;
+}
+section.usage section.options {
+  width: 45%;
+  background: rgb(8, 27, 86);
+  padding: 2em;
+  color: rgb(245, 245, 245);
+  border-radius: 0.5em;
+}
+section.usage section.options article.option {
+  border-bottom: 2px solid grey;
+  margin-bottom: 5em;
+  padding-bottom: 1em;
+}
+section.usage section.options article.option section.hidden-informations {
+  transition: 0.3s;
+  height: 0;
+  overflow: hidden;
+  display: none;
+}
+section.usage section.options article.option section.hidden-informations span.icon {
+  display: block;
+  height: 25px;
+  width: 25px;
+  margin-bottom: 0.25em;
+}
+section.usage section.options article.option section.hidden-informations span.icon svg {
+  width: 100%;
+  height: 100%;
+}
+section.usage section.options article.option section.hidden-informations p {
+  line-height: 1.5em;
+  color: #dfdfdf;
+}
+section.usage section.options article.option div.wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 2em;
+}
+section.usage section.options article.option div.wrap h2 {
+  pointer-events: none;
+  font-weight: 700;
+  font-family: "Comfortaa", cursive;
+  font-size: 1.5rem;
+}
+section.usage section.options article.option div.wrap span {
+  pointer-events: none;
+  display: block;
+  height: 30px;
+  width: 30px;
+  transform: rotate(180deg);
+  transition: 0.3s;
+}
+section.usage section.options article.option div.wrap span svg {
+  width: 100%;
+  height: 100%;
+}
+section.usage section.right-element {
+  width: 40%;
+  background: rgb(8, 27, 86);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5em;
+}
+section.usage section.right-element figure {
+  width: 85%;
+  overflow: hidden;
+}
+section.usage section.right-element figure img {
+  width: 100%;
+  border-radius: 0.5em;
+}

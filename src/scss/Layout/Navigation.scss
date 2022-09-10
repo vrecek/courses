@@ -19,6 +19,27 @@ nav.layout-navigation {
          font-size: .9rem;
          transition: .3s;
          cursor: pointer;
+         position: relative;
+
+         &:not(.register):not(.login) {
+            &:before {
+               content: '';
+               width: 0;
+               height: 2px;
+               @include Absolute(50%, 100%);
+               transform: translateX(-50%);
+               background: royalblue;
+               transition: .3s;
+            }
+
+            &:hover {
+               color: royalblue;
+
+               &:before {
+                  width: 100%;
+               }
+            }
+         }
 
          &.register {
             background: royalblue;
@@ -26,11 +47,15 @@ nav.layout-navigation {
             padding: .5em 1em;
             color: $clr-white;
             margin-left: 3em;
+
+            &:hover { background: rgb(229, 62, 1); }
          }
 
          &.login {
             font-weight: 700;
             margin-left: 1em;
+
+            &:hover { color: royalblue; }
          }
       }
    }

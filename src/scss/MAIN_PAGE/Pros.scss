@@ -1,0 +1,59 @@
+@import '../config';
+
+section.pros {
+   padding: 5em 2em 8em 2em;
+
+   section.text {
+      h1,
+      p {
+         font-family: 'Comfortaa', cursive;
+         text-align: center;
+      }
+
+      h1 {
+         font-size: 2.2rem;
+         font-weight: 700;
+         margin-bottom: .2em;
+      }
+
+      p {
+         font-size: 1rem;
+         font-weight: 600;
+         width: 50%;
+         margin: 0 auto;
+      }
+   }
+
+   section.container {
+      @include Flex(sb, c);
+      flex-wrap: wrap;
+      margin-top: 5em;
+      align-items: stretch;
+
+      article {
+         width: 25%;
+         @include Flex(sb, c);
+         flex-direction: column;
+         border-bottom: 2px solid royalblue;
+         padding-bottom: 1em;
+
+         h2 {
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-bottom: .75em;
+         }
+
+         p {
+            text-align: center;
+            color: #505050;
+         }
+
+         span {
+            @include Rectangle(60px);
+            color: royalblue;
+
+            svg { @include FullSize; }
+         }
+      }
+   }
+}

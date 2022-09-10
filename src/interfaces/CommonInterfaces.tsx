@@ -16,3 +16,5 @@ export type Ref = React.RefObject<HTMLDivElement>
 export interface IRef {
    reference: Ref
 }
+
+export type HE = HTMLCollectionOf<HTMLElement>

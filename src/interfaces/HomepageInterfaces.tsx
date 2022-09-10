@@ -1,3 +1,5 @@
+import DropDown from "../functions/DropdownClass"
+
 export interface ISideParagraphTag {
    text: string,
    icon: JSX.Element
@@ -24,4 +26,11 @@ export interface IPlan {
    list: IListType[],
    listHeader: string,
    title: string
+}
+
+export interface IOption {
+   myDD: DropDown,
+   allDDs: DropDown[],
+   id: number,
+   imageToSet: string
 }

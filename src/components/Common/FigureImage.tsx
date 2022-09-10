@@ -5,7 +5,7 @@ const FigureImage = ({cname, source, altTxt}: IFigure) => {
    return (
       <figure className={ cname ?? '' }>
          
-         <img src={ source } alt={ altTxt } />
+         <img loading='lazy' src={ source } alt={ altTxt } />
 
       </figure>
    )

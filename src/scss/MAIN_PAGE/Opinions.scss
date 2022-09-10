@@ -1,0 +1,108 @@
+@import '../config';
+
+section.opinions {
+   min-height: 100vh;
+   padding: 0 2em;
+   padding-bottom: 5em;
+
+   h1 {
+      font-size: 1.75rem;
+      font-weight: 600;
+      margin-bottom: 1em;
+   }
+
+   section.container {
+      @include Flex(sb, c);
+      flex-wrap: wrap;
+      align-items: stretch;
+      width: 100%;
+
+      article {
+         @include Flex(sb, none);
+         flex-direction: column;
+         width: 30%;
+         margin: 1em;
+         background: rgb(162, 21, 162);
+         border-radius: .25em;
+         padding: 2em;
+         color: $clr-white;
+         position: relative;
+
+         span.bg-icon {
+            @include Absolute(50%, 50%);
+            transform: translate(-50%, -50%);
+            color: $clr-white;
+            opacity: .05;
+            @include Rectangle(80%);
+
+            svg { @include FullSize; }
+         }
+
+         div {
+            position: relative;
+            z-index: 3;
+         }
+
+         div.text {
+            margin: 2em 0 4em 0;
+
+            h3 {
+               font-weight: 800;
+               font-size: 1.5rem;
+               margin-bottom: .5em;
+            }
+
+            p {
+               font-family: 'Comfortaa', cursive;
+               font-weight: 600;
+            }
+         }
+
+         div.rating {
+            @include Flex(fe, c);
+
+            span {
+               @include Rectangle(30px);
+
+               svg { @include FullSize; }
+
+               &.active {
+                  color: yellow;
+               }
+            }
+         }
+
+         div.user {
+            display: flex;
+
+            figure {
+               border-radius: 50%;
+               width: 15%;
+               aspect-ratio: 1;
+               overflow: hidden;
+
+               img {
+                  @include FullSize;
+                  object-fit: cover;
+               }
+            }
+
+            div {
+               @include Flex(c, none);
+               flex-direction: column;
+               margin-left: 1em;
+
+               h4.name {
+                  font-weight: 700;
+               }
+
+               h5.who {
+                  text-transform: uppercase;
+                  font-weight: 600;
+                  font-size: .85rem;
+               }
+            }
+         }
+      }
+   }
+}

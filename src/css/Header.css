@@ -39,6 +39,7 @@ header.homepage-header article.text-container div.buttons-container button {
   border: 0;
   border-radius: 0.4em;
   cursor: pointer;
+  transition: 0.2s;
 }
 header.homepage-header article.text-container div.buttons-container button label {
   color: rgb(245, 245, 245);
@@ -49,9 +50,15 @@ header.homepage-header article.text-container div.buttons-container button label
 header.homepage-header article.text-container div.buttons-container button:nth-child(2) {
   background: rgba(128, 0, 128, 0.9);
 }
+header.homepage-header article.text-container div.buttons-container button:nth-child(2):hover {
+  background: #670067;
+}
 header.homepage-header article.text-container div.buttons-container button:nth-child(1) {
   background: rgba(65, 105, 225, 0.9);
   margin-right: 1em;
+}
+header.homepage-header article.text-container div.buttons-container button:nth-child(1):hover {
+  background: #2b58de;
 }
 header.homepage-header figure {
   position: absolute;

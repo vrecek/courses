@@ -1,3 +1,97 @@
 section.preview {
-  height: 100vh;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+section.preview article.text,
+section.preview section.slider {
+  width: 30%;
+}
+section.preview article.text {
+  border-left: 3px solid purple;
+  height: 40vh;
+  padding: 0.5em 0 0.5em 1em;
+  margin-right: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: none;
+  flex-direction: column;
+}
+section.preview article.text ul {
+  display: flex;
+}
+section.preview article.text ul li {
+  margin-right: 0.75em;
+  display: block;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+section.preview article.text ul li svg {
+  width: 100%;
+  height: 100%;
+}
+section.preview article.text ul li:hover {
+  transform: scale(1.15);
+}
+section.preview article.text h1 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+section.preview article.text p {
+  font-family: "Comfortaa", cursive;
+  font-weight: 700;
+  line-height: 1.5em;
+}
+section.preview section.slider {
+  position: relative;
+}
+section.preview section.slider ul {
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%) translateY(100%);
+  display: flex;
+}
+section.preview section.slider ul li {
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+  margin: 0 0.25em;
+  display: block;
+  height: 16px;
+  width: 16px;
+  background: rgb(161, 161, 161);
+}
+section.preview section.slider ul li.active {
+  pointer-events: none;
+  background: royalblue;
+}
+section.preview section.slider ul li:hover {
+  transform: scale(1.1);
+  background: #737373;
+}
+section.preview section.slider div.wrap {
+  overflow: hidden;
+}
+section.preview section.slider div.moving {
+  transition: 0.5s;
+  width: inherit;
+  display: flex;
+}
+section.preview section.slider div.moving figure {
+  flex-shrink: 0;
+  width: 100%;
+  height: 40vh;
+  overflow: hidden;
+}
+section.preview section.slider div.moving figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.2em;
 }

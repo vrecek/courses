@@ -25,6 +25,26 @@ nav.layout-navigation ul.list li {
   font-size: 0.9rem;
   transition: 0.3s;
   cursor: pointer;
+  position: relative;
+}
+nav.layout-navigation ul.list li:not(.register):not(.login):before {
+  content: "";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  bottom: auto;
+  right: auto;
+  transform: translateX(-50%);
+  background: royalblue;
+  transition: 0.3s;
+}
+nav.layout-navigation ul.list li:not(.register):not(.login):hover {
+  color: royalblue;
+}
+nav.layout-navigation ul.list li:not(.register):not(.login):hover:before {
+  width: 100%;
 }
 nav.layout-navigation ul.list li.register {
   background: royalblue;
@@ -33,9 +53,15 @@ nav.layout-navigation ul.list li.register {
   color: rgb(245, 245, 245);
   margin-left: 3em;
 }
+nav.layout-navigation ul.list li.register:hover {
+  background: rgb(229, 62, 1);
+}
 nav.layout-navigation ul.list li.login {
   font-weight: 700;
   margin-left: 1em;
+}
+nav.layout-navigation ul.list li.login:hover {
+  color: royalblue;
 }
 nav.layout-navigation figure.logo {
   height: 100%;
