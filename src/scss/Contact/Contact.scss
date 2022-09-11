@@ -1,0 +1,7 @@
+@import '../config';
+
+main.contact {
+   min-height: calc(100vh - $navHeight);
+   margin-top: $navHeight;
+   background: red;
+}

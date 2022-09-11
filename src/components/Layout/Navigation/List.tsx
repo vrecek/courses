@@ -1,14 +1,28 @@
 import React from 'react'
+import { NavigateFunction, useNavigate } from 'react-router-dom'
+import { INavLinks } from '../../../interfaces/NavigateInterfaces'
 
 const List = () => {
+   const n: NavigateFunction = useNavigate()
+   const list: INavLinks[] = [
+      { text: 'Homepage', url: '/' },
+      { text: 'Offer', url: '/offer' },
+      { text: 'Contact', url: '/contact' },
+
+      { text: 'Join us', url: '/register', cname: 'register' },
+      { text: 'Log in', url: '/login', cname: 'login' },
+   ]
+
    return (
       <ul className="list">
 
-         <li>Homepage</li>
-         <li>Offer</li>
-         <li>About</li>
-         <li className="register">Join us</li>
-         <li className="login">Log in</li>
+         {
+            list.map((x, i) => (
+               <li key={i} onClick={() => n(x.url)} className={x.cname ?? ''}>
+                  {x.text}
+               </li>
+            ))
+         }
 
       </ul>
    )

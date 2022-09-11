@@ -1,0 +1,192 @@
+@import '../config';
+
+main.register,
+main.login {
+   height: calc(100vh - $navHeight);
+   margin-top: $navHeight;
+   @include Flex(c, c);
+
+   main.wrap {
+      height: 90%;
+      width: 80%;
+      @include Flex(c, c);
+
+      h6.reminder {
+         &,
+         a {
+            font-size: .9rem;
+            font-weight: 500;
+         }
+
+         a {
+            text-decoration: none;
+            color: royalblue;
+            transition: .3s;
+
+            &:hover { color: orangered; }
+         }
+      }
+
+      form.form,
+      section.image {
+         background: whitesmoke;
+         width: 50%;
+         height: 100%;
+      }
+
+      form.form {
+         @include Flex(sa, c);
+         flex-direction: column;
+         
+         div.wrap {
+            width: 60%;
+            @include Flex(c, c);
+            flex-direction: column;
+
+            section.text {
+               h1 {
+                  text-align: center;
+                  font-size: 1.5rem;
+                  font-weight: 700;
+               }
+
+               p {
+                  text-align: center;
+                  font-weight: 500;
+                  font-size: .9rem;
+               }
+            }
+
+            button {
+               width: 100%;
+               padding: .75em 0;
+               border-radius: .15em;
+               background: royalblue;
+               outline: 0;
+               border: 0;
+               cursor: pointer;
+               transition: .3s;
+
+               label {
+                  color: $clr-white;
+                  font-weight: 500;
+                  font-family: 'Sora', sans-serif;
+                  font-size: 1rem;
+               }
+
+               &:hover {
+                  background: darken(royalblue, 10%);
+               }
+            }
+
+            div.input {
+               position: relative;
+               width: 100%;
+
+               &.first {
+                  margin-top: 2em;
+               }
+
+               &:not(.last) {
+                  margin-bottom: .5em;
+               }
+               
+               span.input-icon {
+                  position: absolute;
+                  right: 10px;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  @include Rectangle(28px);
+                  cursor: pointer;
+
+                  svg {
+                     @include FullSize;
+                     pointer-events: none;
+                  }
+               }
+   
+               input {
+                  width: 100%;
+                  border-radius: .15em;
+                  padding: .85em .75em;
+                  padding-right: 45px;
+                  outline: 0;
+                  background: white;
+                  border: 1px solid rgb(224, 224, 224);
+                  font-family: 'Comfortaa', cursive;
+                  font-weight: 600;
+                  font-size: .95rem;
+
+                  &::placeholder {
+                     font-size: .85rem;
+                  }
+               }
+            }
+   
+            span.entry-icon {
+               @include Rectangle(70px);
+   
+               svg {
+                  @include FullSize;
+               }
+            }
+         }
+      }
+
+      section.image {
+         position: relative;   
+
+         figure {
+            @include Absolute(0, 0);
+            @include FullSize;
+
+            img {
+               @include FullSize;
+               object-fit: cover;
+            }
+         }
+      }
+   }
+}
+
+main.register {
+   form.register-form {
+      button {
+         margin-top: 2em;
+      }
+   }
+}
+
+main.login {
+   form.login-form {
+     
+      section.options {
+         width: 100%;
+         @include Flex(sb, c);
+         margin-bottom: 2em;
+         margin-top: .25em;
+
+         div.remember-div {
+            @include Flex(none, c);
+
+            input {
+               margin-left: .25em;
+               cursor: pointer;
+            }
+         }
+
+         h6,
+         label {
+            font-size: .85rem;
+            font-weight: 600;
+            cursor: pointer;
+         }
+
+         h6 {
+            transition: .3s;
+
+            &:hover { color: royalblue; }
+         }
+      }
+   }
+}

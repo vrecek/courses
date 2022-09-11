@@ -17,8 +17,8 @@ const OneOption = ({myDD, allDDs, id, imageToSet}: IOption) => {
       }
 
 
-      myDD.switchActive()
       myDD.rotateArrow(t.children[0].children[1] as HTMLElement)
+      myDD.switchActive()
 
       myDD.getActive 
       ? myDD.expandMenu(.3, t.children[1] as HTMLElement) 
@@ -31,8 +31,8 @@ const OneOption = ({myDD, allDDs, id, imageToSet}: IOption) => {
       for(let i = 0; i < restOptions.length; i++) {
          if(!allDDs[i].getActive) continue
 
-         allDDs[i].switchActive()
          allDDs[i].rotateArrow(restOptions[i].children[0].children[1] as HTMLElement)
+         allDDs[i].switchActive()
          allDDs[i].shrinkMenu(.3, restOptions[i])
       }
    }

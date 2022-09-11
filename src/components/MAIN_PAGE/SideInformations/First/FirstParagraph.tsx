@@ -2,8 +2,11 @@ import React from 'react'
 import Button from '../../../Common/Button'
 import {ImParagraphLeft} from 'react-icons/im'
 import PTag from '../PTag'
+import { scroller } from 'react-scroll'
 
 const FirstParagraph = () => {
+   const offset = { offset: -60 }
+   
    return (
       <article className="text-container">
 
@@ -14,7 +17,7 @@ const FirstParagraph = () => {
             text='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio a non eveniet ratione sed repellat quibusdam facere laudantium neque, commodi saepe dolorum debitis expedita placeat modi praesentium quos explicabo exercitationem.' 
          />
 
-         <Button text='Learn more' />
+         <Button action={() => scroller.scrollTo('usage', offset)} text='Learn more' />
 
       </article>
    )
