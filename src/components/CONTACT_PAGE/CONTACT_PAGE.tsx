@@ -1,11 +1,14 @@
 import React from 'react'
 import '../../css/Contact.css'
+import ContactForm from './ContactForm'
+import ContactText from './ContactText'
 
 const CONTACT_PAGE = () => {
    return (
       <main className="contact">
 
-         conta
+         <ContactText />
+         <ContactForm />
 
       </main>
    )

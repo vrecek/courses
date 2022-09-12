@@ -1,5 +1,151 @@
 main.contact {
-  min-height: calc(100vh - 60px);
+  height: calc(100vh - 60px);
   margin-top: 60px;
-  background: red;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+main.contact figure {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: auto;
+  right: auto;
+  height: 50%;
+  width: 100%;
+  z-index: -1;
+}
+main.contact figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+main.contact form,
+main.contact article {
+  width: 35%;
+  height: 93%;
+}
+main.contact article {
+  display: flex;
+  justify-content: space-between;
+  align-items: none;
+  flex-direction: column;
+}
+main.contact article section.informations div.detail {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  margin-bottom: 1.5em;
+}
+main.contact article section.informations div.detail span.icon {
+  display: block;
+  height: 40px;
+  width: 40px;
+  margin-right: 1em;
+}
+main.contact article section.informations div.detail span.icon svg {
+  width: 100%;
+  height: 100%;
+}
+main.contact article section.informations div.detail div.text h5 {
+  color: rgb(9, 163, 9);
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+main.contact article section.informations div.detail div.text p {
+  font-weight: 500;
+}
+main.contact article ul {
+  display: flex;
+  list-style: none;
+  margin-top: 3em;
+}
+main.contact article ul li {
+  display: block;
+  height: 40px;
+  width: 40px;
+  border: 2px solid black;
+  margin-right: 1em;
+  cursor: pointer;
+  transition: 0.3s;
+  transform: rotate(45deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main.contact article ul li svg {
+  width: 70%;
+  height: 70%;
+  transform: rotate(-45deg);
+  transition: 0.3s;
+}
+main.contact article ul li:hover {
+  transform: scale(1.1);
+}
+main.contact article ul li:hover svg {
+  transform: rotate(0);
+}
+main.contact article p.entry {
+  margin-top: 1em;
+  font-weight: 500;
+  color: rgb(245, 245, 245);
+  text-shadow: 0 0 2px #303030;
+}
+main.contact article h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: "Comfortaa", cursive;
+  color: rgb(245, 245, 245);
+  text-shadow: 0 0 2px #303030;
+}
+main.contact form {
+  background: white;
+  border-radius: 0.3em;
+  padding: 2em;
+}
+main.contact form button {
+  padding: 0.75em 0;
+  width: 30%;
+  outline: 0;
+  border: 2px solid #303030;
+  cursor: pointer;
+  transition: 0.3s;
+  background: none;
+  border-radius: 0.25em;
+  margin-top: 0.5em;
+}
+main.contact form button label {
+  font-family: "Comfortaa", cursive;
+  font-weight: 700;
+  transition: 0.3s;
+}
+main.contact form button:hover {
+  background: #303030;
+}
+main.contact form button:hover label {
+  color: rgb(245, 245, 245);
+}
+main.contact form div.textarea textarea {
+  width: 100%;
+  resize: none;
+  outline: 0;
+  border: 2px solid #303030;
+  border-radius: 0.2em;
+  padding: 0.5em;
+  font-family: "Comfortaa", cursive;
+  font-weight: 700;
+  height: 30vh;
+}
+main.contact form div.input {
+  margin-bottom: 2em;
+}
+main.contact form div.input input {
+  width: 100%;
+  outline: 0;
+  padding: 0.5em 0;
+  border: 0;
+  border-bottom: 2px solid #303030;
+  font-family: "Comfortaa", cursive;
+  font-weight: 700;
 }

@@ -1,7 +1,159 @@
 @import '../config';
 
 main.contact {
-   min-height: calc(100vh - $navHeight);
+   height: calc(100vh - $navHeight);
    margin-top: $navHeight;
-   background: red;
+   @include Flex(sa, c);
+   position: relative;
+
+   figure {
+      @include Absolute(0, 0);
+      height: 50%;
+      width: 100%;
+      z-index: -1;
+
+      img {
+         @include FullSize;
+         object-fit: cover;
+      }
+   }
+
+   form,
+   article {
+      width: 35%;
+      height: 93%;
+   }
+
+   article {
+      @include Flex(sb, none);
+      flex-direction: column;
+
+      section.informations {
+         div.detail {
+            @include Flex(none, c);
+            margin-bottom: 1.5em;
+            
+            span.icon {
+               @include Rectangle(40px);
+               margin-right: 1em;
+
+               svg {
+                  @include FullSize;
+               }
+            }
+
+            div.text {
+               h5 {
+                  color: rgb(9, 163, 9);
+                  font-weight: 600;
+                  margin-bottom: .5em;
+               }
+
+               p {
+                  font-weight: 500;
+               }
+            }
+         }
+      }
+
+      ul {
+         display: flex;
+         list-style: none;
+         margin-top: 3em;
+
+         li {
+            @include Rectangle(40px);
+            border: 2px solid black;
+            margin-right: 1em;
+            cursor: pointer;
+            transition: .3s;
+            transform: rotate(45deg);
+            @include Flex(c, c);
+
+            svg { 
+               @include FullSize(70%);
+               transform: rotate(-45deg); 
+               transition: .3s;
+            }
+
+            &:hover {
+               transform: scale(1.1);
+               svg { transform: rotate(0);  }
+            }
+         }
+      }
+
+      p.entry {
+         margin-top: 1em;
+         font-weight: 500;
+         color: $clr-white;
+         text-shadow: 0 0 2px #303030;
+      }
+
+      h1 {
+         font-size: 3rem;
+         font-weight: 700;
+         font-family: 'Comfortaa', cursive;
+         color: $clr-white;
+         text-shadow: 0 0 2px #303030;
+      }
+   }
+
+   form {
+      background: white;
+      border-radius: .3em;
+      padding: 2em;
+
+      button {
+         padding: .75em 0;
+         width: 30%;
+         outline: 0;
+         border: 2px solid #303030;
+         cursor: pointer;
+         transition: .3s;
+         background: none;
+         border-radius: .25em;
+         margin-top: .5em;
+
+         label {
+            font-family: 'Comfortaa', cursive;
+            font-weight: 700;
+            transition: .3s;
+         }
+
+         &:hover {
+            background: #303030;
+            label { color: $clr-white; }
+         }
+      }
+
+      div.textarea {
+         textarea {
+            width: 100%;
+            resize: none;
+            outline: 0;
+            border: 2px solid #303030;
+            border-radius: .2em;
+            padding: .5em;
+            font-family: 'Comfortaa', cursive;
+            font-weight: 700;
+            height: 30vh;
+         }
+      }
+
+      div.input {
+         margin-bottom: 2em;
+
+         input {
+            width: 100%;
+            outline: 0;
+            padding: .5em 0;
+            border: 0;
+            border-bottom: 2px solid #303030;
+            font-family: 'Comfortaa', cursive;
+            font-weight: 700;
+         }
+      }
+   }
+
 }
