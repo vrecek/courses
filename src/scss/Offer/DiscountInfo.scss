@@ -1,0 +1,80 @@
+@import '../config';
+
+section.discount-info {
+   height: 100vh;
+   padding: 2em;
+   @include Flex(sa, c);
+
+   section.discount-text {
+      width: 40%;
+      
+      h1 {
+         font-weight: 600;
+         font-size: 3.25rem;
+      }
+
+      p {
+         font-family: 'Comfortaa', cursive;
+         font-weight: 700;
+         color: #606060;
+         line-height: 1.75em;
+         margin: 1em 0 2em 0;
+      }
+
+      button {
+         cursor: pointer;
+         transition: .3s;
+         width: 100%;
+         outline: 0;
+         border: 0;
+         padding: 1em 0;
+         border-radius: .15em;
+         background: royalblue;
+
+         label {
+            color: $clr-white;
+            font-size: 1rem;
+            font-weight: 700;
+            font-family: 'Comfortaa', cursive;
+         }
+
+         &:hover {
+            background: darken(royalblue, 10%);
+         }
+      }
+   }
+
+   figure.discount-image {
+      width: 40%;
+      position: relative;
+
+      div.line {
+         width: 125%;
+         @include Absolute(50%, 50%);
+         transform: translate(-50%, -50%);
+         background: red;
+         height: 4px;
+
+         &::before {
+            width: 0;
+            height: 0;
+            content: '';
+            @include Absolute(0, 100%);
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-top: 40px solid red;
+         }
+      }
+
+      figure {
+         width: 100%;
+         z-index: 3;
+         position: relative;
+         overflow: hidden;
+
+         img {
+            width: 100%;
+         }
+      }
+   }
+}

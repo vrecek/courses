@@ -4,6 +4,8 @@ import LoginImage from './LoginImage'
 import '../../../css/LogReg.css'
 
 const LOGIN_PAGE = () => {
+   window.scrollTo(0, 0)
+   
    return (
       <main className="login">
 

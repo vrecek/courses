@@ -1,0 +1,76 @@
+@import '../config';
+
+section.advantages {
+   height: 100vh;
+   padding: 1em;
+   @include Flex(c, c);
+   flex-direction: column;
+
+   section.cards {
+      @include Flex(sa, c);
+      margin-top: 6em;
+
+      article.card {
+         background: whitesmoke;
+         padding: 1em;
+         border-radius: .25em;
+         width: 22%;
+         text-align: center;
+         @include Flex(c, c);
+         flex-direction: column;
+         position: relative;
+         overflow: hidden;
+
+         &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform: translate(-50%, -50%);
+            @include Rectangle(50px);
+            border: 3px solid royalblue;
+            border-radius: 50%;
+         }
+
+         h3 {
+            font-weight: 800;
+            font-size: 1.1rem;
+            margin-top: 2em;
+            margin-bottom: .75em;
+         }
+
+         p {
+            margin-bottom: 2.5em;
+            font-size: 1rem;
+            font-weight: 700;
+            font-family: 'Comfortaa', cursive;
+         }
+
+         span.icon {
+            @include Rectangle(80px);
+            border-radius: 50%;
+            border: 2px solid royalblue;
+            @include Flex(c, c);
+
+            svg {
+               @include FullSize(70%);
+            }
+         }
+      }
+   }
+
+   div.text {
+      text-align: center;
+      
+      h2 {
+         font-size: 1rem;
+         font-weight: 600;
+      }
+
+      h1 {
+         font-size: 3rem;
+         font-weight: 200;
+         color: rgb(83, 83, 83);
+      }
+   }
+}

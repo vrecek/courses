@@ -6,8 +6,12 @@ import TextArea from './TextArea'
 import contact from '../../images/contact.jpg'
 
 const ContactForm = () => {
+   const submitMsg = (e: React.FormEvent): void => {
+      e.preventDefault()
+   }
+
    return (
-      <form>
+      <form onSubmit={submitMsg}>
 
          <FigureImage source={contact} altTxt='Background' />
 

@@ -1,0 +1,77 @@
+section.discount-info {
+  height: 100vh;
+  padding: 2em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+section.discount-info section.discount-text {
+  width: 40%;
+}
+section.discount-info section.discount-text h1 {
+  font-weight: 600;
+  font-size: 3.25rem;
+}
+section.discount-info section.discount-text p {
+  font-family: "Comfortaa", cursive;
+  font-weight: 700;
+  color: #606060;
+  line-height: 1.75em;
+  margin: 1em 0 2em 0;
+}
+section.discount-info section.discount-text button {
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+  outline: 0;
+  border: 0;
+  padding: 1em 0;
+  border-radius: 0.15em;
+  background: royalblue;
+}
+section.discount-info section.discount-text button label {
+  color: rgb(245, 245, 245);
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: "Comfortaa", cursive;
+}
+section.discount-info section.discount-text button:hover {
+  background: #214cce;
+}
+section.discount-info figure.discount-image {
+  width: 40%;
+  position: relative;
+}
+section.discount-info figure.discount-image div.line {
+  width: 125%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  transform: translate(-50%, -50%);
+  background: red;
+  height: 4px;
+}
+section.discount-info figure.discount-image div.line::before {
+  width: 0;
+  height: 0;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  bottom: auto;
+  right: auto;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 40px solid red;
+}
+section.discount-info figure.discount-image figure {
+  width: 100%;
+  z-index: 3;
+  position: relative;
+  overflow: hidden;
+}
+section.discount-info figure.discount-image figure img {
+  width: 100%;
+}

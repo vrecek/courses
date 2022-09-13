@@ -1,0 +1,104 @@
+@import '../config';
+
+main.offer {
+   margin-top: $navHeight;
+
+   section.offers {
+      padding: 2em;
+      @include Flex(sb, c);
+      height: 120vh;
+
+      article.one-offer {
+         margin: 0 .5em;
+         width: 30%;
+         height: 100%;
+
+         &:nth-child(1) section.top { background-image: url('../images/offer/offer2.jpg'); }
+         &:nth-child(2) section.top { background-image: url('../images/offer/offer1.jpg'); }
+         &:nth-child(3) section.top { background-image: url('../images/offer/offer3.jpg'); }
+
+         section.top {
+            height: 40%;
+            background-size: cover;
+            color: $clr-white;
+            padding: 2em;
+            @include Flex(sb, c);
+            flex-direction: column;
+
+            h2.what {
+               font-weight: 600;
+               font-size: 1.1rem;
+            }
+
+            h3.price {
+               text-align: center;
+               font-size: 3rem;
+               font-family: 'Comfortaa', cursive;
+               margin-top: .75em;
+            }
+
+            button {
+               width: 70%;
+               padding: .75em 0;
+               background: royalblue;
+               border-radius: .15em;
+               outline: 0;
+               border: 0;
+               cursor: pointer;
+               transition: .3s;
+
+               label {
+                  color: $clr-white;
+                  font-weight: 700;
+                  font-size: 1rem;
+               }
+
+               &:hover {
+                  background: darken(royalblue, 10%);
+               }
+            }
+
+            p {
+               font-weight: 700;
+               text-align: center;
+            }
+         }
+
+         section.bottom {
+            background: white;
+            height: 60%;
+            padding: 2em 3em;
+            text-align: center;
+            @include Flex(sb, none);
+            flex-direction: column;
+
+            div.rate {
+               @include Flex(none, c);
+               color: gold;
+
+               h5 {
+                  font-size: 2rem;
+                  font-weight: 800;
+               }
+
+               span {
+                  @include Rectangle(2.3rem);
+                  margin-left: .1em;
+                  svg { @include FullSize; }
+               }
+            }
+
+            h4 {
+               font-weight: 700;
+               font-size: 1.2rem;
+               margin-bottom: 1em;
+            }
+
+            p {
+               line-height: 2.5em;
+               font-size: .9rem;
+            }
+         }
+      }
+   }
+}

@@ -46,6 +46,7 @@ section.preview article.text p {
   font-family: "Comfortaa", cursive;
   font-weight: 700;
   line-height: 1.5em;
+  color: #606060;
 }
 section.preview section.slider {
   position: relative;

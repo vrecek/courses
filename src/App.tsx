@@ -10,6 +10,7 @@ import Footer from './components/Layout/Footer/Footer';
 import REGISTER_PAGE from './components/LOGIN_REGISTER_PAGE/Register/REGISTER_PAGE';
 import LOGIN_PAGE from './components/LOGIN_REGISTER_PAGE/Login/LOGIN_PAGE';
 import CONTACT_PAGE from './components/CONTACT_PAGE/CONTACT_PAGE';
+import OFFER_PAGE from './components/OFFER_PAGE/OFFER_PAGE';
 
 function App() {
 	const arrRef: Ref = React.useRef<HTMLDivElement>(null)
@@ -30,6 +31,8 @@ function App() {
 				<Route path='/login' element={ <LOGIN_PAGE /> } />
 
 				<Route path='/contact' element={ <CONTACT_PAGE /> } />
+
+				<Route path='/offer' element={ <OFFER_PAGE /> } />
 
 			</Routes>
 

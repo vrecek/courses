@@ -9,6 +9,8 @@ import Opinions from './Opinions/Opinions'
 import Usage from './Usage/Usage'
 
 const MAIN_PAGE = () => {
+   window.scrollTo(0, 0)
+   
    return (
       <main className="main-page">
 

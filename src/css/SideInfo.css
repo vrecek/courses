@@ -31,6 +31,7 @@ section.side-info article.text-container p.tag {
   border-bottom: 1px solid rgb(195, 195, 195);
   font-family: "Comfortaa", cursive;
   font-size: 1.1rem;
+  color: #505050;
 }
 section.side-info article.text-container p.tag span.icon {
   display: block;

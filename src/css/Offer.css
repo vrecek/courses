@@ -1,0 +1,105 @@
+main.offer {
+  margin-top: 60px;
+}
+main.offer section.offers {
+  padding: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120vh;
+}
+main.offer section.offers article.one-offer {
+  margin: 0 0.5em;
+  width: 30%;
+  height: 100%;
+}
+main.offer section.offers article.one-offer:nth-child(1) section.top {
+  background-image: url("../images/offer/offer2.jpg");
+}
+main.offer section.offers article.one-offer:nth-child(2) section.top {
+  background-image: url("../images/offer/offer1.jpg");
+}
+main.offer section.offers article.one-offer:nth-child(3) section.top {
+  background-image: url("../images/offer/offer3.jpg");
+}
+main.offer section.offers article.one-offer section.top {
+  height: 40%;
+  background-size: cover;
+  color: rgb(245, 245, 245);
+  padding: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+main.offer section.offers article.one-offer section.top h2.what {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+main.offer section.offers article.one-offer section.top h3.price {
+  text-align: center;
+  font-size: 3rem;
+  font-family: "Comfortaa", cursive;
+  margin-top: 0.75em;
+}
+main.offer section.offers article.one-offer section.top button {
+  width: 70%;
+  padding: 0.75em 0;
+  background: royalblue;
+  border-radius: 0.15em;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+main.offer section.offers article.one-offer section.top button label {
+  color: rgb(245, 245, 245);
+  font-weight: 700;
+  font-size: 1rem;
+}
+main.offer section.offers article.one-offer section.top button:hover {
+  background: #214cce;
+}
+main.offer section.offers article.one-offer section.top p {
+  font-weight: 700;
+  text-align: center;
+}
+main.offer section.offers article.one-offer section.bottom {
+  background: white;
+  height: 60%;
+  padding: 2em 3em;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: none;
+  flex-direction: column;
+}
+main.offer section.offers article.one-offer section.bottom div.rate {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  color: gold;
+}
+main.offer section.offers article.one-offer section.bottom div.rate h5 {
+  font-size: 2rem;
+  font-weight: 800;
+}
+main.offer section.offers article.one-offer section.bottom div.rate span {
+  display: block;
+  height: 2.3rem;
+  width: 2.3rem;
+  margin-left: 0.1em;
+}
+main.offer section.offers article.one-offer section.bottom div.rate span svg {
+  width: 100%;
+  height: 100%;
+}
+main.offer section.offers article.one-offer section.bottom h4 {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 1em;
+}
+main.offer section.offers article.one-offer section.bottom p {
+  line-height: 2.5em;
+  font-size: 0.9rem;
+}
