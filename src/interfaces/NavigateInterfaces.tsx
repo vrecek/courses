@@ -1,5 +1,5 @@
 export interface INavLinks {
    cname?: string,
-   url: string,
-   text: string
+   text: string,
+   action: React.MouseEventHandler
 }

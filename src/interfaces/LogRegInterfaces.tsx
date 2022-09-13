@@ -1,3 +1,5 @@
+import UserType from "./UserInterface"
+
 export interface IDivInput {
    placeholder: string,
    type: 'text' | 'password',
@@ -11,4 +13,14 @@ export interface IDivInput {
 export interface IDetails {
    text: string,
    header: string
+}
+
+export interface IExist {
+   msg: string,
+   exists: boolean
+}
+
+export interface IRegistered {
+   exists: boolean,
+   user: null | UserType
 }
