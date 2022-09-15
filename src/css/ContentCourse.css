@@ -1,0 +1,90 @@
+main.content {
+  width: 75%;
+  background: rgb(250, 250, 250);
+  padding: 1.5em;
+}
+main.content main.lesson:not(.no-selected) section.finish {
+  margin-top: 5em;
+}
+main.content main.lesson:not(.no-selected) section.finish div.back-top {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  cursor: pointer;
+  width: max-content;
+}
+main.content main.lesson:not(.no-selected) section.finish div.back-top h5 {
+  font-weight: 800;
+  margin-right: 0.5em;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+main.content main.lesson:not(.no-selected) section.finish div.back-top span {
+  display: block;
+  height: 25px;
+  width: 25px;
+  transition: 0.3s;
+}
+main.content main.lesson:not(.no-selected) section.finish div.back-top:hover h5, main.content main.lesson:not(.no-selected) section.finish div.back-top:hover span {
+  color: royalblue;
+}
+main.content main.lesson:not(.no-selected) section.finish div.back-top:hover span {
+  transform: scale(1.5) translateY(-25%);
+}
+main.content main.lesson:not(.no-selected) span.icon svg {
+  width: 100%;
+  height: 100%;
+}
+main.content section.current-info h2 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: #606060;
+  font-weight: 700;
+  font-family: "Comfortaa", cursive;
+}
+main.content section.current-info h1 {
+  font-weight: 800;
+  font-size: 1.75rem;
+  margin-bottom: 3em;
+}
+main.content section.lesson.no-selected {
+  height: calc(100vh - 60px - 3em);
+  display: flex;
+  justify-content: space-between;
+  align-items: none;
+  flex-direction: column;
+}
+main.content section.lesson.no-selected div.text h1 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin-bottom: 0.75em;
+}
+main.content section.lesson.no-selected div.text p {
+  width: 70%;
+  font-weight: 700;
+  font-family: "Comfortaa", cursive;
+}
+main.content section.lesson.no-selected div.cancel p {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.75em;
+  color: #505050;
+}
+main.content section.lesson.no-selected div.cancel button {
+  padding: 0.75em 1.5em;
+  outline: 0;
+  border: 0;
+  background: crimson;
+  border-radius: 0.25em;
+  transition: 0.3s;
+  cursor: pointer;
+}
+main.content section.lesson.no-selected div.cancel button label {
+  font-weight: 500;
+  color: rgb(245, 245, 245);
+  font-family: "Sora", sans-serif;
+  font-size: 1rem;
+}
+main.content section.lesson.no-selected div.cancel button:hover {
+  background: red;
+}

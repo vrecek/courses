@@ -1,4 +1,5 @@
 import DropDown from "../functions/DropdownClass"
+import { IHList } from "./PlanInterface"
 
 export interface ISideParagraphTag {
    text: string,
@@ -11,21 +12,17 @@ export interface ICard {
    header: string
 }
 
-export interface IListType {
-   type: 'active' | 'inactive',
-   text: string,
-}
-
 export interface IPlanList {
-   list: IListType[],
+   list: IHList[],
    header: string
 }
 
-export interface IPlan {
+export interface IHomepagePlan {
    price: number,
-   list: IListType[],
+   list: IHList[],
    listHeader: string,
-   title: string
+   title: string,
+   id: number
 }
 
 export interface IOption {

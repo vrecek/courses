@@ -9,6 +9,29 @@ const List = () => {
    const n: NavigateFunction = useNavigate()
    const user: PossibleUser = React.useContext(UserContext)
 
+
+   const pushUserLinks = (): void => {
+      user
+      ? 
+      list.push({ text: 'Logout', action: logoutFunc, cname: 'logout' })
+      :
+      list.push({ text: 'Join us', action: () => n('/register'), cname: 'register' },
+                { text: 'Log in', action: () => n('/login'), cname: 'login' })
+   }
+   const pushPlanLinks = (): void => {
+      if(user?.plan) 
+         list.push({ text: 'My course', action: redirectPlanFunc, cname: 'plan' })
+   }
+
+
+   const redirectPlanFunc = (): void => {
+      n('/course', {
+         state: {
+            planId: user!.plan,
+            user
+         }
+      })
+   }
    const logoutFunc = (): void => {
       if(!user) return
 
@@ -21,7 +44,7 @@ const List = () => {
       window.localStorage.setItem('users', JSON.stringify(allUsers))
       window.localStorage.removeItem('user_logged')
 
-      window.location.reload()
+      window.location.href = '/'
    }
 
    const list: INavLinks[] = [
@@ -30,13 +53,9 @@ const List = () => {
       { text: 'Contact', action: () => n('/contact') },
    ]
 
-   user
-   ? 
-   list.push({ text: 'Logout', action: logoutFunc, cname: 'logout' })
-   :
-   list.push({ text: 'Join us', action: () => n('/register'), cname: 'register' },
-             { text: 'Log in', action: () => n('/login'), cname: 'login' })
-
+   pushUserLinks()
+   pushPlanLinks()   
+   
    return (
       <ul className="list">
 

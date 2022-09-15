@@ -122,10 +122,10 @@ section.pricing section.container article.plan ul li {
 section.pricing section.container article.plan ul li:not(:last-child) {
   margin-bottom: 0.75em;
 }
-section.pricing section.container article.plan ul li.active span {
+section.pricing section.container article.plan ul li.true span {
   color: green;
 }
-section.pricing section.container article.plan ul li.inactive span {
+section.pricing section.container article.plan ul li.false span {
   color: red;
 }
 section.pricing section.container article.plan ul li span {

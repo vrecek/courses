@@ -21,7 +21,7 @@ nav.layout-navigation {
          cursor: pointer;
          position: relative;
 
-         &:not(.register):not(.login) {
+         &:not(.register):not(.login):not(.logout):not(.plan) {
             &:before {
                content: '';
                width: 0;
@@ -41,13 +41,33 @@ nav.layout-navigation {
             }
          }
 
+         &.logout,
          &.register {
-            background: royalblue;
             border-radius: 1em;
             padding: .5em 1em;
             color: $clr-white;
             margin-left: 3em;
+         }
 
+         &.plan {
+            border-radius: 1em;
+            padding: .5em 1em;
+            color: $clr-white;
+            margin-left: 1em;
+            background: royalblue;
+
+            &:hover { background: cornflowerblue; }
+         }
+
+         &.logout {
+            background: crimson;
+
+            &:hover { background: red; }
+         }
+
+         &.register {
+            background: royalblue;
+            
             &:hover { background: rgb(229, 62, 1); }
          }
 

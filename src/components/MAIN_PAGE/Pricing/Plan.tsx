@@ -1,9 +1,28 @@
 import React from 'react'
-import { IPlan } from '../../../interfaces/HomepageInterfaces'
+import { NavigateFunction, useNavigate } from 'react-router-dom'
+import { UserContext } from '../../../App'
+import { PossibleUser } from '../../../interfaces/CommonInterfaces'
+import { IHomepagePlan } from '../../../interfaces/HomepageInterfaces'
 import Button from '../../Common/Button'
 import PlanList from './PlanList'
 
-const Plan = ({title, list, listHeader, price}: IPlan) => {
+const Plan = ({title, list, listHeader, price, id}: IHomepagePlan) => {
+   const user: PossibleUser = React.useContext(UserContext)
+   const n: NavigateFunction = useNavigate()
+
+   const buyPlan = (): void => {
+      if(!user) {
+         n('/login')
+         return
+      }
+
+      n('/finalize-order', { 
+         state: {
+            id,
+            user,
+         } 
+      })
+   }
    return (
       <article className="plan">
 
@@ -20,7 +39,7 @@ const Plan = ({title, list, listHeader, price}: IPlan) => {
 
             <h3 className="price">{price} $</h3>
 
-            <Button text='Buy plan' />
+            <Button action={buyPlan} text='Buy plan' />
 
          </div>
 

@@ -121,8 +121,8 @@ section.pricing {
                &:not(:last-child) { margin-bottom: .75em; }
                @include Flex(none, c);
 
-               &.active span { color: green; }
-               &.inactive span { color: red; }
+               &.true span { color: green; }
+               &.false span { color: red; }
 
                span {
                   @include Rectangle(25px);

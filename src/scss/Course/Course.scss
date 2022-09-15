@@ -1,0 +1,7 @@
+@import '../config';
+
+main.course-page {
+   min-height: calc(100vh - $navHeight);
+   margin-top: $navHeight;
+   display: flex;
+}

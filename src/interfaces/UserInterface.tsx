@@ -6,5 +6,5 @@ export default interface UserType {
    password: string,
    mail: string,
 
-   plan: null | 1 | 2 | 3
+   plan: number | null
 }

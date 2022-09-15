@@ -1,0 +1,120 @@
+@import '../config';
+
+main.order-page {
+   height: calc(100vh - $navHeight);
+   margin-top: $navHeight;
+   padding: 4em 2em;
+   background: rgb(235, 235, 235);
+   @include Flex(sa, none);
+
+   section.confirm {
+      width: 40%;
+      border-left: 4px solid royalblue;
+      padding-left: 2em;
+      @include Flex(sb, none);
+      flex-direction: column;
+
+      div {
+         &.top {
+            h1 {
+               font-weight: 500;
+         
+               &, 
+               span {
+                  font-size: 2rem;
+               }
+         
+               span {
+                  font-weight: 700;
+                  color: #606060;
+               }
+            }
+            
+            h2.price {
+               font-size: 3rem;
+               margin-top: 1em;
+               font-weight: 800;
+            }
+
+            p {
+               font-weight: 600;
+               color: #606060;
+               margin-top: 2em;
+               font-size: 1rem;
+            }
+         }
+
+         &.bottom {
+            p.red {
+               color: red;
+               font-weight: 700;
+               margin-bottom: .5em;
+               font-size: .9rem;
+            }
+   
+            button {
+               width: 100%;
+               padding: 1em 0;
+               background: royalblue;
+               border-radius: .15em;
+               border: 0;
+               transition: .3s;
+               cursor: pointer;
+               outline: 0;
+      
+               label {
+                  font-family: 'Sora', sans-serif;
+                  font-size: 1rem;
+                  font-weight: 700;
+                  color: $clr-white;
+               }
+      
+               &:hover {
+                  background: darken(royalblue, 15%);
+               }
+            }
+         }
+      }
+   }
+
+   section.profits {
+      width: 35%;
+      background: whitesmoke;
+      border-radius: .25em;
+      padding: 2em;
+      border-bottom: 4px solid royalblue;
+
+      ul {
+         margin: 2em 0 0 0;
+         list-style: none;
+
+         li {
+            margin-bottom: 1.5em;
+            @include Flex(none, c);
+
+            span {
+               color: royalblue;
+               margin-right: .5em;
+               @include Rectangle(30px);
+
+               svg { @include FullSize; }
+            }
+
+            p {
+               font-size: 1rem;
+               width: 85%;
+               font-weight: 700;
+               font-family: 'Comfortaa', cursive;
+            }
+         }
+      }
+
+      h2 {
+         font-size: 1.25rem;
+         font-weight: 500;
+         border-left: 2px solid royalblue;
+         padding-left: .5em;
+         color: royalblue;
+      }
+   }
+}

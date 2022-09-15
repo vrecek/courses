@@ -12,15 +12,15 @@ const PlanList = ({list, header}: IPlanList) => {
 
             {
                list.map((x, i) => (
-                  <li className={x.type} key={i}>
+                  <li className={x.present.toString()} key={i}>
 
                      <span>
                         {
-                           x.type === 'active' ? <TiTick /> : <TiTimes />
+                           x.present ? <TiTick /> : <TiTimes />
                         }
                      </span>
 
-                     {x.text}
+                     {x.name}
 
                   </li>
                ))

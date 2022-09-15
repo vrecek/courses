@@ -1,62 +1,10 @@
 import React from 'react'
 import Plan from './Plan'
 import '../../../css/Pricing.css'
-import { IListType, IPlan } from '../../../interfaces/HomepageInterfaces'
 import PricingInfo from './PricingInfo'
+import Plans from '../../../data/Plans'
 
 const Pricing = () => {
-   const planList: IListType[][] = [
-      [
-         { text: 'Lorem dolor sit', type: 'active' },
-         { text: 'Lorem dolor sit', type: 'active' },
-         { text: 'Lorem dolor sit', type: 'inactive' },
-         { text: 'Lorem dolor sit', type: 'inactive' },
-         { text: 'Lorem dolor sit', type: 'inactive' },
-         { text: 'Lorem dolor sit', type: 'inactive' },
-      ],
-
-      [
-         { text: 'Lorem dolor sit', type: 'active' },
-         { text: 'Lorem dolor sit', type: 'active' },
-         { text: 'Lorem dolor sit', type: 'active' },
-         { text: 'Lorem dolor sit', type: 'active' },
-         { text: 'Lorem dolor sit', type: 'inactive' },
-         { text: 'Lorem dolor sit', type: 'inactive' },
-      ],
-
-      [
-         { text: 'Lorem dolor sit', type: 'active' },
-         { text: 'Lorem dolor sit', type: 'active' },
-         { text: 'Lorem dolor sit', type: 'active' },
-         { text: 'Lorem dolor sit', type: 'active' },
-         { text: 'Lorem dolor sit', type: 'active' },
-         { text: 'Lorem dolor sit', type: 'active' },
-      ],
-   ]
-
-   const planArray: IPlan[] = [
-      {
-         title: 'Beginner',
-         list: planList[0],
-         listHeader: 'For beginners, who are new to web experience',
-         price: 999
-      },
-
-      {
-         title: 'Intermediate',
-         list: planList[1],
-         listHeader: 'Good if you want expand your current knowledge',
-         price: 999
-      },
-
-      {
-         title: 'Exclusive',
-         list: planList[2],
-         listHeader: 'For those, who are looking for real knowledge',
-         price: 999
-      }
-   ]
-
    return (
       <section className="pricing">
 
@@ -69,13 +17,14 @@ const Pricing = () => {
             <section className="container">
 
                {
-                  planArray.map((x, i) => (
+                  Plans.map((x, i) => (
                      <Plan 
                         key={i}
-                        title={x.title}
-                        listHeader={x.listHeader}
+                        id={x.id}
+                        title={x.type}
+                        listHeader={x.infoPara}
                         price={x.price}
-                        list={x.list}
+                        list={x.infoList}
                      />
                   ))
                }

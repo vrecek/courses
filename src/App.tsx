@@ -11,6 +11,8 @@ import REGISTER_PAGE from './components/LOGIN_REGISTER_PAGE/Register/REGISTER_PA
 import LOGIN_PAGE from './components/LOGIN_REGISTER_PAGE/Login/LOGIN_PAGE';
 import CONTACT_PAGE from './components/CONTACT_PAGE/CONTACT_PAGE';
 import OFFER_PAGE from './components/OFFER_PAGE/OFFER_PAGE';
+import ORDER_PAGE from './components/ORDER_PAGE/ORDER_PAGE';
+import COURSE_PAGE from './components/COURSE_PAGE/COURSE_PAGE';
 
 const UserContext = React.createContext<PossibleUser>(null)
 
@@ -39,6 +41,14 @@ function App() {
 					<Route path='/contact' element={ <CONTACT_PAGE /> } />
 
 					<Route path='/offer' element={ <OFFER_PAGE /> } />
+					<Route path='/finalize-order' element={ <ORDER_PAGE /> } />
+
+					<Route path='/course'>
+
+						<Route path='' element={ <COURSE_PAGE /> } />
+						<Route path=':chapter/:lesson' element={ <COURSE_PAGE /> } />
+
+					</Route>
 
 				</Routes>
 

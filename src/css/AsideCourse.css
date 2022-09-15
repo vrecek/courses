@@ -1,0 +1,75 @@
+aside.aside-section {
+  width: 25%;
+  background: #303030;
+  color: rgb(245, 245, 245);
+}
+aside.aside-section ul.outer-ul {
+  list-style: none;
+}
+aside.aside-section ul.outer-ul li.outer-li div.chapter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75em;
+  background: #222222;
+  cursor: pointer;
+}
+aside.aside-section ul.outer-ul li.outer-li div.chapter h6 {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 500;
+  pointer-events: none;
+}
+aside.aside-section ul.outer-ul li.outer-li div.chapter span {
+  display: block;
+  height: 25px;
+  width: 25px;
+  pointer-events: none;
+  transition: 0.3s;
+}
+aside.aside-section ul.outer-ul li.outer-li div.chapter span svg {
+  width: 100%;
+  height: 100%;
+}
+aside.aside-section ul.outer-ul li.outer-li ul.inner-ul {
+  list-style: none;
+  background: #191919;
+  overflow: hidden;
+  transition: 0.3s;
+  height: 0;
+}
+aside.aside-section ul.outer-ul li.outer-li ul.inner-ul li.inner-li {
+  padding: 0.75em;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+  padding-left: 1.5em;
+  color: #ebebeb;
+}
+aside.aside-section ul.outer-ul li.outer-li ul.inner-ul li.inner-li:hover {
+  background: #202020;
+}
+aside.aside-section ul.outer-ul li.outer-li ul.inner-ul li.inner-li.active {
+  pointer-events: none;
+  background: rgb(54, 91, 204);
+}
+aside.aside-section h1 {
+  font-weight: 700;
+  font-size: 1.25rem;
+  padding: 0.75em;
+  margin: 0.5em 0;
+  display: flex;
+  justify-content: none;
+  align-items: center;
+}
+aside.aside-section h1 span {
+  display: block;
+  height: 25px;
+  width: 25px;
+  margin-right: 0.75em;
+}
+aside.aside-section h1 span svg {
+  width: 100%;
+  height: 100%;
+}

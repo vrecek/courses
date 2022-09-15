@@ -27,7 +27,7 @@ nav.layout-navigation ul.list li {
   cursor: pointer;
   position: relative;
 }
-nav.layout-navigation ul.list li:not(.register):not(.login):before {
+nav.layout-navigation ul.list li:not(.register):not(.login):not(.logout):not(.plan):before {
   content: "";
   width: 0;
   height: 2px;
@@ -40,18 +40,36 @@ nav.layout-navigation ul.list li:not(.register):not(.login):before {
   background: royalblue;
   transition: 0.3s;
 }
-nav.layout-navigation ul.list li:not(.register):not(.login):hover {
+nav.layout-navigation ul.list li:not(.register):not(.login):not(.logout):not(.plan):hover {
   color: royalblue;
 }
-nav.layout-navigation ul.list li:not(.register):not(.login):hover:before {
+nav.layout-navigation ul.list li:not(.register):not(.login):not(.logout):not(.plan):hover:before {
   width: 100%;
 }
-nav.layout-navigation ul.list li.register {
-  background: royalblue;
+nav.layout-navigation ul.list li.logout, nav.layout-navigation ul.list li.register {
   border-radius: 1em;
   padding: 0.5em 1em;
   color: rgb(245, 245, 245);
   margin-left: 3em;
+}
+nav.layout-navigation ul.list li.plan {
+  border-radius: 1em;
+  padding: 0.5em 1em;
+  color: rgb(245, 245, 245);
+  margin-left: 1em;
+  background: royalblue;
+}
+nav.layout-navigation ul.list li.plan:hover {
+  background: cornflowerblue;
+}
+nav.layout-navigation ul.list li.logout {
+  background: crimson;
+}
+nav.layout-navigation ul.list li.logout:hover {
+  background: red;
+}
+nav.layout-navigation ul.list li.register {
+  background: royalblue;
 }
 nav.layout-navigation ul.list li.register:hover {
   background: rgb(229, 62, 1);
