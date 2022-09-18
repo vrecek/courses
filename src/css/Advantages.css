@@ -11,6 +11,8 @@ section.advantages section.cards {
   justify-content: space-around;
   align-items: center;
   margin-top: 6em;
+  width: 100%;
+  align-items: stretch;
 }
 section.advantages section.cards article.card {
   background: whitesmoke;
@@ -19,7 +21,7 @@ section.advantages section.cards article.card {
   width: 22%;
   text-align: center;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
   position: relative;
@@ -54,10 +56,12 @@ section.advantages section.cards article.card span.icon {
   height: 80px;
   width: 80px;
   border-radius: 50%;
-  border: 2px solid royalblue;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+section.advantages section.cards article.card span.icon:not(.plus) {
+  border: 2px solid royalblue;
 }
 section.advantages section.cards article.card span.icon svg {
   width: 70%;

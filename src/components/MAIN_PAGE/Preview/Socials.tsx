@@ -7,7 +7,7 @@ const Socials = () => {
       <ul className="socials">
 
          <li><BsFacebook /></li>
-         <li><BsGithub /></li>
+         <li onClick={() => window.open('https://github.com/vrecek', '_blank')}><BsGithub /></li>
          <li><ImMail4 /></li>
 
       </ul>

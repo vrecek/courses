@@ -29,5 +29,24 @@ export interface IOption {
    myDD: DropDown,
    allDDs: DropDown[],
    id: number,
-   imageToSet: string
+   imageToSet: string,
+   para: string,
+   header: string
+}
+
+export interface IOpinionText {
+   header: string,
+   text: string
+}
+
+export interface IOpinionUser {
+   occupation: string,
+   name: string,
+   avatar: string
+}
+
+export interface IOpinion {
+   rate: number,
+   opinion: IOpinionText,
+   user: IOpinionUser
 }

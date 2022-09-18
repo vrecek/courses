@@ -10,11 +10,11 @@ const FirstParagraph = () => {
    return (
       <article className="text-container">
 
-         <h2>Lorem ispum dolor</h2>
+         <h2>Live examples</h2>
 
          <PTag 
             icon={ <ImParagraphLeft /> }
-            text='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio a non eveniet ratione sed repellat quibusdam facere laudantium neque, commodi saepe dolorum debitis expedita placeat modi praesentium quos explicabo exercitationem.' 
+            text='Learn not only by plain text, but also by a live examples of code, images and videos, making learning easier and more comfortable and get through plenty of detailed lessons.' 
          />
 
          <Button action={() => scroller.scrollTo('usage', offset)} text='Learn more' />

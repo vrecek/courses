@@ -6,7 +6,7 @@ const CodeText = ({children, asSpan, color}: ICodeText) => {
       fontWeight: '600',
       color: color ?? '#404040',
       wordSpacing: '2px',
-      fontSize: '1.1rem',
+      fontSize: '1rem',
       lineHeight: '2em'
    }
 

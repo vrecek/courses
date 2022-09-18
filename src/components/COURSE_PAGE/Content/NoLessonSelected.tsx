@@ -33,14 +33,14 @@ const NoLessonSelected = () => {
 
          <div className='text'>
             
-            <h1>Select lesson you want to get through</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam neque in porro? Eveniet porro eum nobis incidunt aspernatur laboriosam.</p>
+            <h1>Select a lesson you want to get through</h1>
+            <p>Complete all of your lessons. Your progress is automatically saved.</p>
 
          </div>
 
          <div className="cancel">
 
-            <p>Lorem ipsuym dolor sit amet coqneatur elit</p>
+            <p>This process cannot be reversed</p>
             <Button action={cancelSub} text='Cancel subscription' />
 
          </div>

@@ -1,11 +1,12 @@
 import React from 'react'
+import { IOpinionText } from '../../../interfaces/HomepageInterfaces'
 
-const UserText = () => {
+const UserText = ({header, text}: IOpinionText) => {
    return (
       <div className="text">
 
-         <h3>Lorem ipsum dolor</h3>
-         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum vitae ipsa assumenda..</p>   
+         <h3>{header}</h3>
+         <p>{text}</p>   
 
       </div>
    )

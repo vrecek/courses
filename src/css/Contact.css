@@ -86,23 +86,25 @@ main.contact article ul li:hover {
 main.contact article ul li:hover svg {
   transform: rotate(0);
 }
-main.contact article p.entry {
+main.contact article div.text-entry {
+  background: rgba(245, 245, 245, 0.9);
+  padding: 1em;
+  border-radius: 0.25em;
+}
+main.contact article div.text-entry p.entry {
   margin-top: 1em;
   font-weight: 500;
-  color: rgb(245, 245, 245);
-  text-shadow: 0 0 2px #303030;
 }
-main.contact article h1 {
+main.contact article div.text-entry h1 {
   font-size: 3rem;
   font-weight: 700;
   font-family: "Comfortaa", cursive;
-  color: rgb(245, 245, 245);
-  text-shadow: 0 0 2px #303030;
 }
 main.contact form {
   background: white;
   border-radius: 0.3em;
   padding: 2em;
+  position: relative;
 }
 main.contact form button {
   padding: 0.75em 0;
@@ -114,6 +116,22 @@ main.contact form button {
   background: none;
   border-radius: 0.25em;
   margin-top: 0.5em;
+  position: relative;
+}
+main.contact form button h6 {
+  position: absolute;
+  top: 130%;
+  left: 0;
+  width: max-content;
+  font-size: 0.9rem;
+  font-weight: 700;
+  font-family: "Comfortaa", cursive;
+}
+main.contact form button h6.true {
+  color: green;
+}
+main.contact form button h6.false {
+  color: red;
 }
 main.contact form button label {
   font-family: "Comfortaa", cursive;

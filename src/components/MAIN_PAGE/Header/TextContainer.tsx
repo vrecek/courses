@@ -4,11 +4,11 @@ const TextContainer = () => {
    return (
       <>
       
-         <p className="small">Lorem ipsum dolor sit amet.</p>
+         <p className="small">Latest and detailed</p>
 
-         <h1>Lorem ipsum dolor sit conqstr</h1>
+         <h1>Looking for a web development courses?</h1>
 
-         <p className="big">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi, accusamus nam animi quibusdam illum totam voluptates modi cumque adipisci consequuntur earum distinctio veniam.</p>
+         <p className="big">We offer courses about web developing, which we are constantly updating them, whenever there is a new release to these programming languages.</p>
 
       </>
    )

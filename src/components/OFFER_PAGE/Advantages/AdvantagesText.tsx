@@ -4,8 +4,8 @@ const AdvantagesText = () => {
    return (
       <div className="text">
 
-         <h2>Lorem ipsum</h2>
-         <h1>Dolor sitamet tolorem</h1>
+         <h2>Advantages</h2>
+         <h1>Advantages of our plans</h1>
 
       </div>
    )

@@ -9,6 +9,8 @@ section.advantages {
    section.cards {
       @include Flex(sa, c);
       margin-top: 6em;
+      width: 100%;
+      align-items: stretch;
 
       article.card {
          background: whitesmoke;
@@ -16,7 +18,7 @@ section.advantages {
          border-radius: .25em;
          width: 22%;
          text-align: center;
-         @include Flex(c, c);
+         @include Flex(sb, c);
          flex-direction: column;
          position: relative;
          overflow: hidden;
@@ -49,8 +51,9 @@ section.advantages {
          span.icon {
             @include Rectangle(80px);
             border-radius: 50%;
-            border: 2px solid royalblue;
             @include Flex(c, c);
+
+            &:not(.plus) { border: 2px solid royalblue; }
 
             svg {
                @include FullSize(70%);

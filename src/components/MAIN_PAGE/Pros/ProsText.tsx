@@ -6,7 +6,7 @@ const ProsText = () => {
 
          <h1>Learning doesn't have to be hard</h1>
          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur provident perferendis mollitia est ipsum laudantium ipsa cumque quos minus.
+            Read about profits when having bought one of our services, and decide yourself to buy one.
          </p>
 
       </section>

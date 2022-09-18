@@ -4,7 +4,7 @@ import { HE } from '../../../interfaces/CommonInterfaces'
 import { IOption } from '../../../interfaces/HomepageInterfaces'
 import DivInformations from './DivInformations'
 
-const OneOption = ({myDD, allDDs, id, imageToSet}: IOption) => {
+const OneOption = ({myDD, allDDs, id, imageToSet, header, para}: IOption) => {
    const toggleDisplay = (e: React.MouseEvent): void => {
       const t: HTMLElement = (e.target as HTMLElement).parentElement! as HTMLElement
       const restOptions: HTMLElement[] = 
@@ -42,12 +42,12 @@ const OneOption = ({myDD, allDDs, id, imageToSet}: IOption) => {
 
          <div onClick={toggleDisplay} className="wrap">
 
-            <h2>Option lorem qcoinsqs</h2>
+            <h2>{header}</h2>
             <span><AiOutlineArrowDown /></span>
 
          </div>
 
-         <DivInformations />
+         <DivInformations>{para}</DivInformations>
 
       </article>
    )

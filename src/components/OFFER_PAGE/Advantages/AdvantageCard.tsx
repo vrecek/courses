@@ -1,14 +1,21 @@
 import React from 'react'
-import { AiFillUnlock, AiOutlinePlus } from 'react-icons/ai'
+import { AiOutlinePlus } from 'react-icons/ai'
+import { IAdvantage } from '../../../interfaces/OfferPageInterfaces'
 
-const AdvantageCard = () => {
+const AdvantageCard = ({icon, header, para}: IAdvantage) => {
    return (
       <article className="card">
 
-         <span className="icon"><AiFillUnlock /></span>
-         <h3>Lorem ipsum</h3>
-         <p>Lorem ipsum dolor sia amet coenqstur advatnages offer page dolorem coqnesautr</p>
-         <span className="icon"><AiOutlinePlus /></span>
+         <span className="icon">{icon}</span>
+
+         <div>
+            
+            <h3>{header}</h3>
+            <p>{para}</p>
+
+         </div>
+
+         <span className="icon plus"><AiOutlinePlus /></span>
 
       </article>
    )

@@ -7,11 +7,11 @@ const SecondParagraph = () => {
    return (
       <article className="text-container">
 
-         <h2>Lorem ispum dolor</h2>
+         <h2>All necessary tools</h2>
 
          <PTag 
             icon={ <ImParagraphLeft /> }
-            text='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio a non eveniet ratione sed repellat quibusdam facere laudantium neque, commodi saepe dolorum debitis expedita placeat modi praesentium quos explicabo exercitationem.' 
+            text='Besides plain language, you will also learn all libraries and frameworks required to a modern web development that will make your job easier and more interesting' 
          />
 
          <Cards />

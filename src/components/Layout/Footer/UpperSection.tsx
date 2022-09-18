@@ -5,7 +5,7 @@ const UpperSection = () => {
    return (
       <section className="top main">
 
-         <h1>Lorem ipsum dolor.</h1>
+         <h1>Lorem Ipsum's courses</h1>
          <Socials />
 
       </section>

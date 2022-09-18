@@ -1,17 +1,17 @@
 import React from 'react'
 import FigureImage from '../../Common/FigureImage'
-import user from '../../../images/user.jpg'
+import { IOpinionUser } from '../../../interfaces/HomepageInterfaces'
 
-const UserInfo = () => {
+const UserInfo = ({name, avatar, occupation}: IOpinionUser) => {
    return (
       <div className="user">
 
-         <FigureImage source={user} altTxt='Avatar' />
+         <FigureImage source={avatar} altTxt='Avatar' />
 
          <div>
 
-            <h4 className="name">Name Surname</h4>
-            <h5 className="who">Occupation</h5>
+            <h4 className="name">{name}</h4>
+            <h5 className="who">{occupation}</h5>
 
          </div>
 

@@ -6,8 +6,10 @@ const DiscountText = () => {
    return (
       <section className="discount-text">
 
-         <h1>Lorem ipsum 50% dolor</h1>
-         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae, veritatis nemo fugiat laborum numquam dolor maxime, mollitia doloremque expedita optio tempora hic beatae ipsa debitis quod cumque iste vel et?</p>
+         <h1>All courses 50% off!</h1>
+         <p>
+            Look for a discounts of our courses. This is always a good reason to consider buying one of these if you want to be a master in a web developing.
+         </p>
          <Button action={() => scroller.scrollTo('offers', {})} text='Back to offer' />
 
       </section>

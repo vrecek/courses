@@ -14,4 +14,10 @@ export interface IOfferBottom {
    rate: number
 }
 
+export interface IAdvantage {
+   icon: JSX.Element,
+   header: string,
+   para: string
+}
+
 export interface IOffer extends IOfferTop, IOfferBottom {}

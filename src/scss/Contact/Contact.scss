@@ -83,19 +83,21 @@ main.contact {
          }
       }
 
-      p.entry {
-         margin-top: 1em;
-         font-weight: 500;
-         color: $clr-white;
-         text-shadow: 0 0 2px #303030;
-      }
+      div.text-entry {
+         background: rgba(245, 245, 245, 0.9);
+         padding: 1em;
+         border-radius: .25em;
 
-      h1 {
-         font-size: 3rem;
-         font-weight: 700;
-         font-family: 'Comfortaa', cursive;
-         color: $clr-white;
-         text-shadow: 0 0 2px #303030;
+         p.entry {
+            margin-top: 1em;
+            font-weight: 500;
+         }
+   
+         h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            font-family: 'Comfortaa', cursive;
+         }
       }
    }
 
@@ -103,6 +105,7 @@ main.contact {
       background: white;
       border-radius: .3em;
       padding: 2em;
+      position: relative;
 
       button {
          padding: .75em 0;
@@ -114,6 +117,20 @@ main.contact {
          background: none;
          border-radius: .25em;
          margin-top: .5em;
+         position: relative;
+
+         h6 {
+            position: absolute;
+            top: 130%;
+            left: 0;
+            width: max-content;
+            font-size: .9rem;
+            font-weight: 700;
+            font-family: 'Comfortaa', cursive;
+
+            &.true { color: green; }
+            &.false { color: red; }
+         }
 
          label {
             font-family: 'Comfortaa', cursive;

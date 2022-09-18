@@ -4,9 +4,9 @@ const Information = () => {
    return (
       <div>
 
-         <h1>Lorem ispum dolor</h1>
+         <h1>Easy access to your lessons</h1>
       
-         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam quis nihil vero, iusto distinctio incidunt laboriosam tenetur numquam dolores enim autem veniam qui explicabo commodi aspernatur ratione reiciendis in a.</p>
+         <p>Get all your lessons in a one place, gaining easy access to them, as well as clear design of individual sections that help to understand every concept you need</p>
 
       </div>
    )

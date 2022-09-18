@@ -1,10 +1,14 @@
 import React from 'react'
 import { BsFillChatQuoteFill } from 'react-icons/bs'
+import { IOpinion } from '../../../interfaces/HomepageInterfaces'
 import UserInfo from './UserInfo'
 import UserRate from './UserRate'
 import UserText from './UserText'
 
-const Opinion = () => {
+const Opinion = ({rate, opinion, user}: IOpinion) => {
+   const {name, avatar, occupation} = user
+   const {header, text} = opinion
+
    return (
       <article className="opinion">
          
@@ -12,9 +16,9 @@ const Opinion = () => {
             <BsFillChatQuoteFill />
          </span>
 
-         <UserRate rate={4} />
-         <UserText />
-         <UserInfo />
+         <UserRate rate={rate} />
+         <UserText header={header} text={text} />
+         <UserInfo name={name} avatar={avatar} occupation={occupation} />
 
       </article>
    )
