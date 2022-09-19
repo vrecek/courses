@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/courses/static/css/main.5be37943.css",
+    "main.js": "/courses/static/js/main.a3898d9f.js",
+    "static/js/787.2bea198a.chunk.js": "/courses/static/js/787.2bea198a.chunk.js",
+    "static/media/discount.jpg": "/courses/static/media/discount.c6cb213a0a1465288efd.jpg",
+    "static/media/usage.png": "/courses/static/media/usage.208db548360edb460bf5.png",
+    "static/media/usage.jpg": "/courses/static/media/usage.c862d09f060a3cbacec4.jpg",
+    "static/media/contact.jpg": "/courses/static/media/contact.f17b5513851715121cf2.jpg",
+    "static/media/back.jpg": "/courses/static/media/back.e5445e3d3eaf585c9e7f.jpg",
+    "static/media/user4.jpg": "/courses/static/media/user4.7e8dc4ab34ac358f6fe9.jpg",
+    "static/media/user6.jpg": "/courses/static/media/user6.c0873fdaa0bb312dddda.jpg",
+    "static/media/user1.jpg": "/courses/static/media/user1.5ff0d2974f204e50b0a5.jpg",
+    "static/media/user2.jpg": "/courses/static/media/user2.5e19543230a34bd96b00.jpg",
+    "static/media/user5.jpg": "/courses/static/media/user5.8b6739f8fe75031bf4dc.jpg",
+    "static/media/header.jpg": "/courses/static/media/header.96a9dffdfa9600685bd7.jpg",
+    "static/media/side1.gif": "/courses/static/media/side1.5ad4c77586d7185e849a.gif",
+    "static/media/user3.jpg": "/courses/static/media/user3.6e13924d0e1cc431a894.jpg",
+    "static/media/pricing.jpg": "/courses/static/media/pricing.f740d7bd20e05fe39aca.jpg",
+    "static/media/logreg.jpg": "/courses/static/media/logreg.33b5ad7f1f7b64b30f23.jpg",
+    "static/media/logo.png": "/courses/static/media/logo.1574708bbdc09721d5eb.png",
+    "static/media/offer1.jpg": "/courses/static/media/offer1.3e539df1a3c79b73fc96.jpg",
+    "static/media/ch1e1.png": "/courses/static/media/ch1e1.daf5103a4fd99914546c.png",
+    "static/media/offer3.jpg": "/courses/static/media/offer3.1b276ff352357e88aad3.jpg",
+    "static/media/side2.png": "/courses/static/media/side2.2b66bd1f17491a7d10cd.png",
+    "static/media/preview3.png": "/courses/static/media/preview3.031dd34e6f07cb360be2.png",
+    "static/media/preview2.png": "/courses/static/media/preview2.778a1ced4342b1da4730.png",
+    "static/media/preview1.png": "/courses/static/media/preview1.5313c5d855d0733e9e28.png",
+    "static/media/offer2.jpg": "/courses/static/media/offer2.92c3cac42f05c8c5d52f.jpg",
+    "index.html": "/courses/index.html",
+    "main.5be37943.css.map": "/courses/static/css/main.5be37943.css.map",
+    "main.a3898d9f.js.map": "/courses/static/js/main.a3898d9f.js.map",
+    "787.2bea198a.chunk.js.map": "/courses/static/js/787.2bea198a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5be37943.css",
+    "static/js/main.a3898d9f.js"
+  ]
+}
