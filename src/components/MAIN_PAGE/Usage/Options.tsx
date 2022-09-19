@@ -2,13 +2,14 @@ import React from 'react'
 import DropDown from '../../../functions/DropdownClass'
 import { IOption } from '../../../interfaces/HomepageInterfaces'
 import OneOption from './OneOption'
+import image from '../../../images/usage.png'
 
 const Options = () => {
    const [dd] = React.useState<DropDown[]>([...Array(3)].map(() => new DropDown()))
 
    const optionsArray: IOption[] = [
       {
-         imageToSet: 'https://www.pixelstalk.net/wp-content/uploads/2016/07/1080p-HD-Image-Nature-Desktop.jpg',
+         imageToSet: image,
          id: 0,
          allDDs: [dd[1], dd[2]],
          myDD: dd[0],
@@ -17,16 +18,16 @@ const Options = () => {
       },
       
       {
-         imageToSet: 'https://www.pixelstalk.net/wp-content/uploads/2016/07/1080p-HD-Image-Nature-Desktop.jpg',
+         imageToSet: image,
          id: 1,
          allDDs: [dd[0], dd[2]],
          myDD: dd[1],
          para: 'Learn new things by completing our lessons. We recommend taking notes and trying your new abilities you have gained on your own by tring to create your own projects',
-         header: 'Select a lesson you want to check'
+         header: 'Select a lesson you want'
       },
 
       {
-         imageToSet: 'https://www.pixelstalk.net/wp-content/uploads/2016/07/1080p-HD-Image-Nature-Desktop.jpg',
+         imageToSet: image,
          id: 2,
          allDDs: [dd[0], dd[1]],
          myDD: dd[2],

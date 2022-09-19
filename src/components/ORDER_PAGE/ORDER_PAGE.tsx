@@ -24,7 +24,7 @@ const ORDER_PAGE = () => {
          <main className="order-page">
    
             <Confirm id={plan.id} para={plan.offerPagePara} price={plan.price} type={plan.type} />
-            <Profits list={plan.infoList} />
+            <Profits plan={plan} />
    
          </main>
       )

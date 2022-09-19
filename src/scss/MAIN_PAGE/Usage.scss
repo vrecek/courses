@@ -22,8 +22,9 @@ section.usage {
 
       article.option {
          border-bottom: 2px solid grey;
-         margin-bottom: 5em;
          padding-bottom: 1em;
+
+         &:not(:last-child) { margin-bottom: 5em; }
 
          section.hidden-informations {
             transition: .3s;
@@ -54,7 +55,7 @@ section.usage {
                pointer-events: none;
                font-weight: 700;
                font-family: 'Comfortaa', cursive;
-               font-size: 1.5rem;
+               @include Clamp(1, 6, 1.5);
             }
 
             span {
@@ -84,5 +85,30 @@ section.usage {
             border-radius: .5em;
          }
       }
+   }
+
+   @media (max-width: 768px) {
+      flex-direction: column;
+      height: auto;
+      padding: 2em;
+
+      section.options,
+      section.right-element {
+         height: 85%;
+         width: 100%;
+      }
+
+      section.options {
+         border-radius: .5em .5em 0 0;
+      }
+
+      section.right-element {
+         padding: 1em 0;
+         border-radius: 0 0 .5em .5em;
+      }
+   }
+
+   @media (max-width: 480px) {
+      padding: .4em .2em;
    }
 }

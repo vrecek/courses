@@ -4,7 +4,7 @@ import {TiTick, TiTimes} from 'react-icons/ti'
 
 const PlanList = ({list, header}: IPlanList) => {
    return (
-      <div className="wrap">
+      <div className="wrap list">
 
          <h4 className='list-info'>{header}</h4>
 

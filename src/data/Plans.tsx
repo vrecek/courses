@@ -15,7 +15,11 @@ const Plans: IPlan[] = [
          { name: 'All language aspects', present: false },
          { name: 'Hosting services', present: false },
          { name: 'Personal mentor', present: false }, 
-     ],
+      ],
+      infoDetails: {
+         language: 'English',
+         lastUpdated: '11.09.2022'
+      },
       offerPagePara: 'Nam pulvinar arcu ac porttitor mattis. Phasellus eget ultrices nisi, facilisis interdum nisl. Phasellus vestibulum sagittis nisl ac porttitor. Sed dignissim mattis mollis. Maecenas ac euismod purus. Pellentesque luctus massa sed metus eleifend semper. Proin nisl lorem.',
       offerPageHeader: 'For beginners',
       courseAside: [
@@ -72,6 +76,10 @@ const Plans: IPlan[] = [
          { name: 'Hosting services', present: false },
          { name: 'Personal mentor', present: false }, 
       ],
+      infoDetails: {
+         language: 'English',
+         lastUpdated: '12.08.2022'
+      },
       offerPagePara: 'Donec non efficitur odio, quis condimentum est. Nulla vitae ultrices velit, at pharetra nunc. Curabitur volutpat facilisis mi quis tempor. Donec eget ligula sagittis, pulvinar eros eu, efficitur mauris. Nulla mollis fringilla risus, id dictum mi condimentum vitae.',
       offerPageHeader: 'For intermediate users',
       courseAside: [
@@ -145,6 +153,10 @@ const Plans: IPlan[] = [
       price: 50,
       rate: 5,
       infoPara: 'For those, who are looking for real knowledge',
+      infoDetails: {
+         language: 'English',
+         lastUpdated: '15.09.2022'
+      },
       infoList: [
          { name: 'Access to the course', present: true },
          { name: 'Live code editor', present: true },

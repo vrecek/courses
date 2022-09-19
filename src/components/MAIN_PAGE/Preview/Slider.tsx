@@ -1,6 +1,9 @@
 import React from 'react'
 import FigureImage from '../../Common/FigureImage'
 import SliderButtons from './SliderButtons'
+import i1 from '../../../images/preview/preview1.png'
+import i2 from '../../../images/preview/preview2.png'
+import i3 from '../../../images/preview/preview3.png'
 
 const Slider = () => {
    return (
@@ -10,9 +13,9 @@ const Slider = () => {
 
             <div className="moving">
 
-               <FigureImage source='https://www.pixelstalk.net/wp-content/uploads/2016/07/1080p-HD-Image-Nature-Desktop.jpg' altTxt='Slider' />
-               <FigureImage source='https://wallpaperaccess.com/full/300068.jpg' altTxt='Slider' />
-               <FigureImage source='https://www.pixelstalk.net/wp-content/uploads/2016/07/Free-Download-1080p-Full-HD-Images.jpg' altTxt='Slider' />
+               <FigureImage source={i1} altTxt='Slider' />
+               <FigureImage source={i2} altTxt='Slider' />
+               <FigureImage source={i3} altTxt='Slider' />
 
             </div>
 

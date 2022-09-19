@@ -6,6 +6,20 @@ main.content {
    padding: 1.5em;
 
    main.lesson:not(.no-selected) {
+      section.code-box section {
+         &::-webkit-scrollbar {
+            height: 8px;
+            width: 100%;
+            background: grey; 
+         }
+
+         &::-webkit-scrollbar-thumb {
+            height: 100%;
+            border-radius: 1em;
+            background: black;
+         }
+      }
+
       section.finish {
          margin-top: 5em;
 
@@ -100,6 +114,18 @@ main.content {
 
             &:hover { background: red; }
          }
+      }
+   }
+
+   @media (max-width: 768px) {
+      width: 100%;
+   }
+
+   @media (max-width: 480px) {
+      padding: 1.5em .5em;      
+
+      figure.code-image {
+         width: 100% !important;
       }
    }
 }

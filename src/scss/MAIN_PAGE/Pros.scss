@@ -11,16 +11,18 @@ section.pros {
       }
 
       h1 {
-         font-size: 2.2rem;
+         @include Clamp(1.5, 6, 2.2);
          font-weight: 700;
          margin-bottom: .2em;
       }
 
       p {
-         font-size: 1rem;
+         @include Clamp(.9, 4, 1);
          font-weight: 600;
          width: 50%;
          margin: 0 auto;
+
+         @media (max-width: 480px) { width: 100%; }
       }
    }
 
@@ -39,8 +41,9 @@ section.pros {
 
          h2 {
             font-weight: 700;
-            font-size: 1.5rem;
+            @include Clamp(1.25, 5, 1.5);
             margin-bottom: .75em;
+            text-align: center;
          }
 
          p {
@@ -53,6 +56,21 @@ section.pros {
             color: royalblue;
 
             svg { @include FullSize; }
+         }
+      }
+   }
+
+   @media (max-width: 768px) {
+      padding-bottom: 4em;
+
+      section.container {
+         flex-direction: column;
+         align-items: center;
+
+         article {
+            width: 300px;
+            max-width: 100%;
+            &:not(:last-child) { margin-bottom: 2em; }
          }
       }
    }

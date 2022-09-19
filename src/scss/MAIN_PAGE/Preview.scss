@@ -7,7 +7,8 @@ section.preview {
 
    article.text,
    section.slider {
-      width: 30%;
+      width: 460px;
+      max-width: 46%;
    }
 
    article.text {
@@ -36,7 +37,7 @@ section.preview {
       }
 
       h1 {
-         font-size: 1.75rem;
+         @include Clamp(1, 6, 1.75);
          font-weight: 600;
          margin-bottom: .5em;
       }
@@ -45,6 +46,8 @@ section.preview {
          font-family: 'Comfortaa', cursive;
          font-weight: 700;
          line-height: 1.5em;
+         @include Clamp(.9, 4, 1);
+
          color: #606060;
       }
    }
@@ -100,6 +103,22 @@ section.preview {
                border-radius: .2em;
             }
          }
+      }
+   }
+
+   @media (max-width: 768px) {
+      flex-direction: column;
+      height: auto;
+      padding: 2em clamp(.5em, 5vw, 1.5em);
+
+      article.text {
+         margin-bottom: 2em;
+      }
+
+      article.text,
+      section.slider {
+         width: 100%;
+         max-width: 100%;
       }
    }
 }

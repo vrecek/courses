@@ -6,11 +6,13 @@ main.offer {
    section.offers {
       padding: 2em;
       @include Flex(sb, c);
+      flex-wrap: wrap;
       height: 120vh;
 
       article.one-offer {
          margin: 0 .5em;
          width: 30%;
+         min-width: 340px;
          height: 100%;
 
          &:nth-child(1) section.top { background-image: url('../images/offer/offer2.jpg'); }
@@ -27,13 +29,13 @@ main.offer {
 
             h2.what {
                font-weight: 600;
-               font-size: 1.1rem;
+               @include Clamp(.95, 4, 1.1);
                text-align: center;
             }
 
             h3.price {
                text-align: center;
-               font-size: 3rem;
+               @include Clamp(2, 6, 3);
                font-family: 'Comfortaa', cursive;
                margin-top: .75em;
             }
@@ -51,7 +53,7 @@ main.offer {
                label {
                   color: $clr-white;
                   font-weight: 700;
-                  font-size: 1rem;
+                  @include Clamp(.9, 4, 1);
                }
 
                &:hover {
@@ -62,6 +64,7 @@ main.offer {
             p {
                font-weight: 700;
                text-align: center;
+               @include Clamp(.85, 4, 1);
             }
          }
 
@@ -97,7 +100,42 @@ main.offer {
 
             p {
                line-height: 2.5em;
-               font-size: .9rem;
+               @include Clamp(.8, 4, .9);
+            }
+         }
+      }
+
+      @media (max-width: 1135px) {
+         height: auto;
+         flex-direction: column;
+         padding: 2em .5em;
+
+         article.one-offer {
+            width: 800px;
+            margin: 0;
+            max-width: 100%;
+            min-width: auto;
+
+            h3.price {
+               margin-bottom: .75em;
+            }
+
+            button {
+               margin-top: 1.5em;
+            }
+
+            div.rate {
+               margin-top: 2em;
+            }
+
+            &:not(:last-child) { margin-bottom: 3em; }
+         }
+      }
+
+      @media (max-width: 480px) {
+         article.one-offer {
+            section.bottom {
+               padding: 1em .5em;
             }
          }
       }

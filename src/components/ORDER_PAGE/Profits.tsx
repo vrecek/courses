@@ -1,14 +1,23 @@
 import React from 'react'
-import { IHList } from '../../interfaces/PlanInterface'
+import { IPlan } from '../../interfaces/PlanInterface'
+import Details from './Details'
 import OrderList from './OrderList'
 
-const Profits = ({list}: {list: IHList[]}) => {
+const Profits = ({plan}: {plan: IPlan}) => {
+   const {language, lastUpdated} = plan.infoDetails
+
    return (
       <section className="profits">
 
-         <h2>You will immediately get access to:</h2>
+         <div>
 
-         <OrderList list={list} />
+            <h2>You will immediately get access to:</h2>
+
+            <OrderList list={plan.infoList} />
+
+         </div>
+
+         <Details lessons={plan.courseAside} language={language} updatedDate={lastUpdated} />
 
       </section>
    )

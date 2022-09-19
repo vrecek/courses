@@ -1,7 +1,7 @@
 @import '../config';
 
 section.advantages {
-   height: 100vh;
+   min-height: 100vh;
    padding: 1em;
    @include Flex(c, c);
    flex-direction: column;
@@ -10,13 +10,15 @@ section.advantages {
       @include Flex(sa, c);
       margin-top: 6em;
       width: 100%;
+      flex-wrap: wrap;
       align-items: stretch;
 
       article.card {
          background: whitesmoke;
          padding: 1em;
          border-radius: .25em;
-         width: 22%;
+         width: 330px;
+         margin: .25em;
          text-align: center;
          @include Flex(sb, c);
          flex-direction: column;
@@ -43,13 +45,13 @@ section.advantages {
 
          p {
             margin-bottom: 2.5em;
-            font-size: 1rem;
+            @include Clamp(.9, 4, 1);
             font-weight: 700;
             font-family: 'Comfortaa', cursive;
          }
 
          span.icon {
-            @include Rectangle(80px);
+            @include Rectangle(clamp(50px, 15vw, 80px));
             border-radius: 50%;
             @include Flex(c, c);
 
@@ -71,9 +73,17 @@ section.advantages {
       }
 
       h1 {
-         font-size: 3rem;
+         @include Clamp(2, 6, 3);
          font-weight: 200;
          color: rgb(83, 83, 83);
+      }
+   }
+
+   @media (max-width: 480px) {
+      padding: .25em;
+      
+      section.cards {
+         margin-top: 2em;
       }
    }
 }

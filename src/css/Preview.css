@@ -7,7 +7,8 @@ section.preview {
 }
 section.preview article.text,
 section.preview section.slider {
-  width: 30%;
+  width: 460px;
+  max-width: 46%;
 }
 section.preview article.text {
   border-left: 3px solid purple;
@@ -38,7 +39,7 @@ section.preview article.text ul li:hover {
   transform: scale(1.15);
 }
 section.preview article.text h1 {
-  font-size: 1.75rem;
+  font-size: clamp(1rem, 6vw, 1.75rem);
   font-weight: 600;
   margin-bottom: 0.5em;
 }
@@ -46,6 +47,7 @@ section.preview article.text p {
   font-family: "Comfortaa", cursive;
   font-weight: 700;
   line-height: 1.5em;
+  font-size: clamp(0.9rem, 4vw, 1rem);
   color: #606060;
 }
 section.preview section.slider {
@@ -95,4 +97,19 @@ section.preview section.slider div.moving figure img {
   height: 100%;
   object-fit: cover;
   border-radius: 0.2em;
+}
+@media (max-width: 768px) {
+  section.preview {
+    flex-direction: column;
+    height: auto;
+    padding: 2em clamp(0.5em, 5vw, 1.5em);
+  }
+  section.preview article.text {
+    margin-bottom: 2em;
+  }
+  section.preview article.text,
+section.preview section.slider {
+    width: 100%;
+    max-width: 100%;
+  }
 }

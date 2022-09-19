@@ -1,14 +1,14 @@
 import React from 'react'
 import Button from '../../Common/Button'
-import {scroller} from 'react-scroll'
+import { NavigateFunction, useNavigate } from 'react-router-dom'
 
 const ButtonsContainer = () => {
-   const offset = { offset: -60 }
+   const n: NavigateFunction = useNavigate()
 
    return (
       <div className="buttons-container">
 
-         <Button action={() => scroller.scrollTo('pricing', offset)} text='Explore offer' />
+         <Button action={() => n('/offer')} text='Explore offer' />
 
       </div>
    )

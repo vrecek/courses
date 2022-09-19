@@ -1,10 +1,10 @@
 @import '../config';
 
 main.order-page {
-   height: calc(100vh - $navHeight);
+   min-height: calc(100vh - $navHeight);
    margin-top: $navHeight;
    padding: 4em 2em;
-   background: rgb(235, 235, 235);
+   background: rgb(239, 239, 239);
    @include Flex(sa, none);
 
    section.confirm {
@@ -21,7 +21,7 @@ main.order-page {
          
                &, 
                span {
-                  font-size: 2rem;
+                  @include Clamp(1.25, 6, 2);
                }
          
                span {
@@ -31,7 +31,7 @@ main.order-page {
             }
             
             h2.price {
-               font-size: 3rem;
+               @include Clamp(2.25, 8, 3);
                margin-top: 1em;
                font-weight: 800;
             }
@@ -40,7 +40,7 @@ main.order-page {
                font-weight: 600;
                color: #606060;
                margin-top: 2em;
-               font-size: 1rem;
+               @include Clamp(.9, 4, 1);
             }
          }
 
@@ -81,8 +81,30 @@ main.order-page {
       width: 35%;
       background: whitesmoke;
       border-radius: .25em;
-      padding: 2em;
+      padding: 1.5em;
       border-bottom: 4px solid royalblue;
+      @include Flex(sb, none);
+      flex-direction: column;
+
+      section.details {
+         @include Flex(sa, c);
+
+         div {
+            @include Flex(c, c);
+            flex-direction: column;
+
+            h6 {
+               font-size: .9rem;
+               font-weight: 500;
+               text-align: center
+            }
+
+            span {
+               @include Rectangle(20px);
+               svg { @include FullSize; }
+            }
+         }
+      }
 
       ul {
          margin: 2em 0 0 0;
@@ -101,7 +123,7 @@ main.order-page {
             }
 
             p {
-               font-size: 1rem;
+               @include Clamp(.9, 4, 1);
                width: 85%;
                font-weight: 700;
                font-family: 'Comfortaa', cursive;
@@ -115,6 +137,53 @@ main.order-page {
          border-left: 2px solid royalblue;
          padding-left: .5em;
          color: royalblue;
+      }
+   }
+
+   @media (max-width: 768px) {
+      height: auto;
+      flex-direction: column;
+
+      section.confirm {
+         width: 100%;
+
+         button {
+            margin-top: 2em;
+         }
+      }
+
+      section.profits {
+         margin-top: 4em;
+         width: 100%;
+      }
+   }
+
+   @media (max-width: 480px) {
+      padding: 2em .75em;
+
+      section.profits {
+         section.details {
+            margin-top: 2em;
+            flex-direction: column;
+            align-items: flex-start;
+
+            div {
+               flex-direction: row;
+
+               &:not(:last-child) { margin-bottom: .5em; }
+
+               h6 { margin-left: 1em; }
+            }
+         }
+      }
+
+      section.confirm {
+         border: 0;
+         padding-left: 0;
+      }
+
+      p.red {
+         margin-top: 1em;
       }
    }
 }

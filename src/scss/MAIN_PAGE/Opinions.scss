@@ -2,11 +2,11 @@
 
 section.opinions {
    min-height: 100vh;
-   padding: 0 2em;
+   padding: 0 clamp(.75em, 5vw, 2em);
    padding-bottom: 5em;
 
    h1 {
-      font-size: 1.75rem;
+      @include Clamp(1.25, 5, 1.75);
       font-weight: 600;
       margin-bottom: 1em;
    }
@@ -21,7 +21,8 @@ section.opinions {
          @include Flex(sb, none);
          flex-direction: column;
          width: 30%;
-         margin: 1em;
+         min-width: 300px;
+         margin: 1em .5em;
          background: rgb(162, 21, 162);
          border-radius: .25em;
          padding: 2em;
@@ -48,13 +49,14 @@ section.opinions {
 
             h3 {
                font-weight: 800;
-               font-size: 1.5rem;
+               @include Clamp(1.25, 4, 1.5);
                margin-bottom: .5em;
             }
 
             p {
                font-family: 'Comfortaa', cursive;
                font-weight: 600;
+               @include Clamp(.9, 4, 1);
             }
          }
 
@@ -62,7 +64,7 @@ section.opinions {
             @include Flex(fe, c);
 
             span {
-               @include Rectangle(30px);
+               @include Rectangle(clamp(25px, 5vw, 30px));
 
                svg { @include FullSize; }
 
@@ -101,6 +103,28 @@ section.opinions {
                   font-weight: 600;
                   font-size: .85rem;
                }
+            }
+         }
+      }
+   }
+
+   @media (max-width: 768px) {
+      section.container {
+         justify-content: center;
+      }
+   }
+
+   @media (max-width: 480px) {
+      section.container {
+         article {
+            width: 100%;
+            min-width: auto;
+            max-width: 100%;
+            padding: 1em .5em;
+            margin: 1em 0;
+
+            div.text {
+               padding: 0 1em;
             }
          }
       }

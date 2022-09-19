@@ -1,10 +1,10 @@
 section.opinions {
   min-height: 100vh;
-  padding: 0 2em;
+  padding: 0 clamp(0.75em, 5vw, 2em);
   padding-bottom: 5em;
 }
 section.opinions h1 {
-  font-size: 1.75rem;
+  font-size: clamp(1.25rem, 5vw, 1.75rem);
   font-weight: 600;
   margin-bottom: 1em;
 }
@@ -22,7 +22,8 @@ section.opinions section.container article {
   align-items: none;
   flex-direction: column;
   width: 30%;
-  margin: 1em;
+  min-width: 300px;
+  margin: 1em 0.5em;
   background: rgb(162, 21, 162);
   border-radius: 0.25em;
   padding: 2em;
@@ -55,12 +56,13 @@ section.opinions section.container article div.text {
 }
 section.opinions section.container article div.text h3 {
   font-weight: 800;
-  font-size: 1.5rem;
+  font-size: clamp(1.25rem, 4vw, 1.5rem);
   margin-bottom: 0.5em;
 }
 section.opinions section.container article div.text p {
   font-family: "Comfortaa", cursive;
   font-weight: 600;
+  font-size: clamp(0.9rem, 4vw, 1rem);
 }
 section.opinions section.container article div.rating {
   display: flex;
@@ -69,8 +71,8 @@ section.opinions section.container article div.rating {
 }
 section.opinions section.container article div.rating span {
   display: block;
-  height: 30px;
-  width: 30px;
+  height: clamp(25px, 5vw, 30px);
+  width: clamp(25px, 5vw, 30px);
 }
 section.opinions section.container article div.rating span svg {
   width: 100%;
@@ -107,4 +109,21 @@ section.opinions section.container article div.user div h5.who {
   text-transform: uppercase;
   font-weight: 600;
   font-size: 0.85rem;
+}
+@media (max-width: 768px) {
+  section.opinions section.container {
+    justify-content: center;
+  }
+}
+@media (max-width: 480px) {
+  section.opinions section.container article {
+    width: 100%;
+    min-width: auto;
+    max-width: 100%;
+    padding: 1em 0.5em;
+    margin: 1em 0;
+  }
+  section.opinions section.container article div.text {
+    padding: 0 1em;
+  }
 }

@@ -22,10 +22,11 @@ nav.layout-navigation ul.list {
 nav.layout-navigation ul.list li {
   margin-left: 2em;
   font-weight: 500;
-  font-size: 0.9rem;
+  font-size: clamp(0.75rem, 2.5vw, 0.9rem);
   transition: 0.3s;
   cursor: pointer;
   position: relative;
+  text-align: center;
 }
 nav.layout-navigation ul.list li:not(.register):not(.login):not(.logout):not(.plan):before {
   content: "";
@@ -87,4 +88,31 @@ nav.layout-navigation figure.logo {
 }
 nav.layout-navigation figure.logo img {
   height: 100%;
+}
+@media (max-width: 768px) {
+  nav.layout-navigation {
+    justify-content: flex-end;
+  }
+  nav.layout-navigation figure.logo {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  nav.layout-navigation {
+    padding: 0.25em 0.5em 0.25em 0.5em;
+  }
+  nav.layout-navigation ul.list li {
+    margin-left: 0;
+  }
+  nav.layout-navigation ul.list li.logout, nav.layout-navigation ul.list li.register {
+    margin-left: 1.5em;
+  }
+  nav.layout-navigation ul.list li.plan {
+    border-radius: 1em;
+    width: max-content;
+    margin-left: 1em;
+  }
+  nav.layout-navigation ul.list li:nth-child(2), nav.layout-navigation ul.list li:nth-child(3) {
+    display: none;
+  }
 }

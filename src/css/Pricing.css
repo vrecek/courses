@@ -29,14 +29,15 @@ section.pricing section.text {
   color: rgb(245, 245, 245);
 }
 section.pricing section.text h1 {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 5vw, 2rem);
   font-family: "Sora", sans-serif;
   font-family: "Comfortaa", cursive;
   font-weight: 700;
+  margin-bottom: 0.5em;
 }
 section.pricing section.text p {
   font-weight: 500;
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 5vw, 1rem);
 }
 section.pricing section.container {
   display: flex;
@@ -71,7 +72,7 @@ section.pricing section.container article.plan div.wrap.bottom {
 }
 section.pricing section.container article.plan h2.title {
   width: 100%;
-  font-size: 1.75rem;
+  font-size: clamp(1.25rem, 5vw, 1.75rem);
   text-align: center;
   font-weight: 700;
   padding: 0.75em 0;
@@ -80,12 +81,16 @@ section.pricing section.container article.plan h2.title {
 }
 section.pricing section.container article.plan h3.price {
   font-family: "Comfortaa", cursive;
-  font-size: 3.75rem;
+  font-size: clamp(2.75rem, 8vw, 3.75rem);
   font-weight: 100;
 }
 section.pricing section.container article.plan h4.list-info {
-  padding: 1em 2em;
+  font-size: clamp(0.9rem, 5vw, 1rem);
   font-weight: 600;
+  margin-bottom: 1em;
+}
+section.pricing section.container article.plan div.wrap.list {
+  padding: clamp(0.5em, 5vw, 1.5em);
 }
 section.pricing section.container article.plan button {
   width: 55%;
@@ -100,21 +105,19 @@ section.pricing section.container article.plan button {
 section.pricing section.container article.plan button label {
   font-weight: 600;
   font-family: "Sora", sans-serif;
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 4vw, 1rem);
 }
 section.pricing section.container article.plan button:hover {
   width: 90%;
   filter: brightness(90%);
 }
 section.pricing section.container article.plan ul {
-  padding: 2em;
-  padding-top: 0;
   list-style: none;
 }
 section.pricing section.container article.plan ul li {
   font-family: "Comfortaa", cursive;
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: clamp(0.8rem, 4vw, 0.9rem);
   display: flex;
   justify-content: none;
   align-items: center;
@@ -161,4 +164,24 @@ section.pricing section.container article.plan:nth-child(3) button {
 }
 section.pricing section.container article.plan:nth-child(3) h3 {
   color: red;
+}
+@media (max-width: 1000px) {
+  section.pricing {
+    height: auto;
+    padding: 2em 0em;
+  }
+  section.pricing div.bg {
+    height: 100%;
+  }
+  section.pricing section.container {
+    flex-direction: column;
+    margin-top: 2em;
+  }
+  section.pricing section.container article.plan {
+    width: 400px;
+    max-width: 100%;
+  }
+  section.pricing section.container article.plan:not(:last-child) {
+    margin-bottom: 2em;
+  }
 }

@@ -9,7 +9,7 @@ main.login {
 main.register main.wrap,
 main.login main.wrap {
   height: 90%;
-  width: 80%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,7 +18,7 @@ main.register main.wrap h6.reminder,
 main.register main.wrap h6.reminder a,
 main.login main.wrap h6.reminder,
 main.login main.wrap h6.reminder a {
-  font-size: 0.9rem;
+  font-size: clamp(0.85rem, 4vw, 0.9rem);
   font-weight: 500;
 }
 main.register main.wrap h6.reminder a,
@@ -36,7 +36,8 @@ main.register main.wrap section.image,
 main.login main.wrap form.form,
 main.login main.wrap section.image {
   background: whitesmoke;
-  width: 50%;
+  width: 630px;
+  max-width: 49%;
   height: 100%;
 }
 main.register main.wrap form.form,
@@ -49,7 +50,7 @@ main.login main.wrap form.form {
 }
 main.register main.wrap form.form div.wrap,
 main.login main.wrap form.form div.wrap {
-  width: 60%;
+  width: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -58,14 +59,14 @@ main.login main.wrap form.form div.wrap {
 main.register main.wrap form.form div.wrap section.text h1,
 main.login main.wrap form.form div.wrap section.text h1 {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: clamp(1.25rem, 6vw, 1.5rem);
   font-weight: 700;
 }
 main.register main.wrap form.form div.wrap section.text p,
 main.login main.wrap form.form div.wrap section.text p {
   text-align: center;
   font-weight: 500;
-  font-size: 0.9rem;
+  font-size: clamp(0.85rem, 4vw, 0.9rem);
 }
 main.register main.wrap form.form div.wrap button,
 main.login main.wrap form.form div.wrap button {
@@ -131,8 +132,8 @@ main.login main.wrap form.form div.wrap div.input span.input-icon {
   top: 50%;
   transform: translateY(-50%);
   display: block;
-  height: 28px;
-  width: 28px;
+  height: clamp(22px, 6vw, 28px);
+  width: clamp(22px, 6vw, 28px);
   cursor: pointer;
 }
 main.register main.wrap form.form div.wrap div.input span.input-icon svg,
@@ -152,7 +153,7 @@ main.login main.wrap form.form div.wrap div.input input {
   border: 1px solid rgb(224, 224, 224);
   font-family: "Comfortaa", cursive;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: clamp(0.85rem, 4vw, 0.95rem);
 }
 main.register main.wrap form.form div.wrap div.input input::placeholder,
 main.login main.wrap form.form div.wrap div.input input::placeholder {
@@ -161,8 +162,8 @@ main.login main.wrap form.form div.wrap div.input input::placeholder {
 main.register main.wrap form.form div.wrap span.entry-icon,
 main.login main.wrap form.form div.wrap span.entry-icon {
   display: block;
-  height: 70px;
-  width: 70px;
+  height: clamp(50px, 15vw, 70px);
+  width: clamp(50px, 15vw, 70px);
 }
 main.register main.wrap form.form div.wrap span.entry-icon svg,
 main.login main.wrap form.form div.wrap span.entry-icon svg {
@@ -213,7 +214,7 @@ main.login form.login-form section.options div.remember-div input {
 }
 main.login form.login-form section.options h6,
 main.login form.login-form section.options label {
-  font-size: 0.85rem;
+  font-size: clamp(0.8rem, 4vw, 0.85rem);
   font-weight: 600;
   cursor: pointer;
 }
@@ -222,4 +223,37 @@ main.login form.login-form section.options h6 {
 }
 main.login form.login-form section.options h6:hover {
   color: royalblue;
+}
+
+@media (max-width: 768px) {
+  main.register,
+main.login {
+    padding: 1em;
+    height: auto;
+  }
+  main.register main.wrap,
+main.login main.wrap {
+    flex-direction: column-reverse;
+  }
+  main.register main.wrap form.form,
+main.register main.wrap section.image,
+main.login main.wrap form.form,
+main.login main.wrap section.image {
+    max-width: none;
+    width: 100%;
+  }
+  main.register main.wrap form.form,
+main.login main.wrap form.form {
+    padding: 1.5em 0;
+  }
+}
+@media (max-width: 480px) {
+  main.register,
+main.login {
+    padding: 1.5em 0;
+  }
+  main.register main.wrap form.form div.wrap,
+main.login main.wrap form.form div.wrap {
+    width: 95%;
+  }
 }

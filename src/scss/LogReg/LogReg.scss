@@ -8,13 +8,13 @@ main.login {
 
    main.wrap {
       height: 90%;
-      width: 80%;
+      width: 100%;
       @include Flex(c, c);
 
       h6.reminder {
          &,
          a {
-            font-size: .9rem;
+            @include Clamp(.85, 4, .9);
             font-weight: 500;
          }
 
@@ -30,7 +30,8 @@ main.login {
       form.form,
       section.image {
          background: whitesmoke;
-         width: 50%;
+         width: 630px;
+         max-width: 49%;
          height: 100%;
       }
 
@@ -40,21 +41,22 @@ main.login {
          position: relative;
          
          div.wrap {
-            width: 60%;
+            width: 70%;
             @include Flex(c, c);
             flex-direction: column;
 
             section.text {
                h1 {
                   text-align: center;
-                  font-size: 1.5rem;
+                  @include Clamp(1.25, 6, 1.5);
                   font-weight: 700;
                }
 
                p {
                   text-align: center;
                   font-weight: 500;
-                  font-size: .9rem;
+                  @include Clamp(.85, 4, .9);
+
                }
             }
 
@@ -110,7 +112,7 @@ main.login {
                   right: 10px;
                   top: 50%;
                   transform: translateY(-50%);
-                  @include Rectangle(28px);
+                  @include Rectangle(clamp(22px, 6vw, 28px));
                   cursor: pointer;
 
                   svg {
@@ -129,7 +131,7 @@ main.login {
                   border: 1px solid rgb(224, 224, 224);
                   font-family: 'Comfortaa', cursive;
                   font-weight: 600;
-                  font-size: .95rem;
+                  @include Clamp(.85, 4, .95);
 
                   &::placeholder {
                      font-size: .85rem;
@@ -138,7 +140,7 @@ main.login {
             }
    
             span.entry-icon {
-               @include Rectangle(70px);
+               @include Rectangle(clamp(50px, 15vw, 70px));
    
                svg {
                   @include FullSize;
@@ -172,8 +174,7 @@ main.register {
 }
 
 main.login {
-   form.login-form {
-     
+   form.login-form {     
       section.options {
          width: 100%;
          @include Flex(sb, c);
@@ -191,7 +192,7 @@ main.login {
 
          h6,
          label {
-            font-size: .85rem;
+            @include Clamp(.8, 4, .85);
             font-weight: 600;
             cursor: pointer;
          }
@@ -200,6 +201,41 @@ main.login {
             transition: .3s;
 
             &:hover { color: royalblue; }
+         }
+      }
+   }
+}
+
+@media (max-width: 768px) {
+   main.register,
+   main.login {
+      padding: 1em;
+      height: auto;
+      
+      main.wrap {
+         flex-direction: column-reverse;
+
+         form.form,
+         section.image {
+            max-width: none;
+            width: 100%;            
+         }
+
+         form.form { padding: 1.5em 0; }
+      }
+   }
+}
+
+@media (max-width: 480px) {
+   main.register,
+   main.login {
+      padding: 1.5em 0;
+
+      main.wrap {
+         form.form {
+            div.wrap {
+               width: 95%;
+            }          
          }
       }
    }

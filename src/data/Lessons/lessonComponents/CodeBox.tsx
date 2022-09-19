@@ -9,6 +9,7 @@ const CodeBox = ({text}: {text: string}) => {
       fontWeight: '600',
       background: 'whitesmoke',
       position: 'relative',
+      overflowX: 'scroll'
    }
 
    const headerStyle: React.CSSProperties = {

@@ -1,3 +1,4 @@
+import { IAsideCourse } from "./PlanInterface";
 import UserType from "./UserInterface";
 
 export interface IOrderState {
@@ -10,4 +11,10 @@ export interface IConfirm {
    type: string,
    para: string,
    id: number
+}
+
+export interface IPlanDetails {
+   language: string,
+   updatedDate: string,
+   lessons: IAsideCourse[]
 }

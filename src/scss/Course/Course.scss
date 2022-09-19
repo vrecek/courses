@@ -4,4 +4,28 @@ main.course-page {
    min-height: calc(100vh - $navHeight);
    margin-top: $navHeight;
    display: flex;
+
+   span.arrow-icon {
+      position: fixed;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      @include Rectangle(20px);
+      z-index: 999;
+      background: white;
+      color: royalblue;
+      border-radius: .15em;
+      cursor: pointer;
+      display: none;
+      transition: .3s;
+
+      svg {
+         @include FullSize;
+         pointer-events: none;
+      }
+
+      @media (max-width: 768px) {
+         display: block;
+      }
+   }
 }

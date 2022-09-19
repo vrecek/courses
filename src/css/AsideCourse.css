@@ -2,6 +2,9 @@ aside.aside-section {
   width: 25%;
   background: #303030;
   color: rgb(245, 245, 245);
+  position: relative;
+  transition: 0.3s;
+  z-index: 99;
 }
 aside.aside-section ul.outer-ul {
   list-style: none;
@@ -72,4 +75,27 @@ aside.aside-section h1 span {
 aside.aside-section h1 span svg {
   width: 100%;
   height: 100%;
+}
+@media (max-width: 768px) {
+  aside.aside-section {
+    position: fixed;
+    left: 0;
+    transform: translateX(-100%);
+    top: 0;
+    width: 300px;
+    max-width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+  }
+  aside.aside-section::-webkit-scrollbar {
+    width: 4px;
+    background: grey;
+  }
+  aside.aside-section::-webkit-scrollbar-thumb {
+    width: 100%;
+    background: royalblue;
+  }
+  aside.aside-section span.arrow-icon {
+    display: block;
+  }
 }

@@ -1,16 +1,16 @@
 @import '../config';
 
 section.discount-info {
-   height: 100vh;
-   padding: 2em;
+   padding: 6em 2em 8em 2em;
    @include Flex(sa, c);
+   position: relative;
 
    section.discount-text {
       width: 40%;
       
       h1 {
          font-weight: 600;
-         font-size: 3.25rem;
+         @include Clamp(2, 8, 3.25);
       }
 
       p {
@@ -19,6 +19,8 @@ section.discount-info {
          color: #606060;
          line-height: 1.75em;
          margin: 1em 0 2em 0;
+         @include Clamp(.9, 4, 1);
+
       }
 
       button {
@@ -74,6 +76,36 @@ section.discount-info {
 
          img {
             width: 100%;
+         }
+      }
+   }
+
+   @media (max-width: 768px) {
+      color: $clr-white;
+      margin-top: 2em;
+
+      section.discount-text {
+         width: 100%;
+
+         h1 {
+            text-shadow: 0 0 2px black;
+         }
+
+         p { color: $clr-white; }
+      }
+
+      figure.discount-image {
+         @include Absolute(0, 0);
+         @include FullSize;
+         z-index: -1;
+
+         figure {
+            @include FullSize;
+
+            img {
+               @include FullSize;
+               object-fit: cover;
+            }
          }
       }
    }

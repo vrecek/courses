@@ -11,7 +11,7 @@ footer.layout-footer {
          margin-bottom: 8em;
 
          h1 {
-            font-size: 2rem;
+            @include Clamp(1.5, 5, 2);
             font-weight: 500;
          }  
 
@@ -20,7 +20,7 @@ footer.layout-footer {
             list-style: none;
 
             li {
-               @include Rectangle(35px);
+               @include Rectangle(clamp(30px, 5vw, 35px));
                &:not(:last-child) { margin-right: .75em; }
                cursor: pointer;
                transition: .3s;
@@ -39,7 +39,7 @@ footer.layout-footer {
       &.bottom {
          section.links {
             @include Flex(sb, c);
-            width: 60%;
+            width: 50%;
 
             ul {
                list-style: none;
@@ -47,7 +47,7 @@ footer.layout-footer {
 
                li {
                   &:first-child {
-                     font-size: 1.5rem;
+                     @include Clamp(1.1, 4, 1.5);
                      font-weight: 800;
                      margin-bottom: .25em;
                      text-transform: uppercase;
@@ -56,7 +56,7 @@ footer.layout-footer {
                   &:not(:first-child) {
                      font-family: 'Comfortaa', cursive;
                      font-weight: 600;
-                     font-size: 1.1rem;
+                     @include Clamp(1, 4, 1.1);
                      &:not(:last-child) { margin-bottom: .5em; }
                      transition: .3s;
                      cursor: pointer;
@@ -70,7 +70,7 @@ footer.layout-footer {
          }
 
          section.newsletter {
-            width: 22%;
+            width: 25%;
             display: flex;
             flex-direction: column;
 
@@ -86,7 +86,7 @@ footer.layout-footer {
                font-weight: 500;
 
                &::placeholder {
-                  font-size: .9rem;
+                  @include Clamp(.8, 4, .9);
                   opacity: .9;
                   font-family: 'Comfortaa', cursive;
                }
@@ -94,7 +94,7 @@ footer.layout-footer {
 
             h2 {
                color: purple;
-               font-size: 1rem;
+               @include Clamp(.9, 4, 1);
                font-weight: 700;
                @include Flex(none, c);
 
@@ -126,6 +126,39 @@ footer.layout-footer {
                &:hover {
                   background: darken(royalblue, 5%);
                }
+            }
+         }
+      }
+   }
+
+   @media (max-width: 768px) {
+      section.main {
+         &.bottom {
+            flex-direction: column;
+
+            section.links {
+               width: 100%;
+               margin-bottom: 5em;
+            }
+
+            section.newsletter {
+               width: 100%;
+            }
+         }
+      }
+   }
+
+   @media (max-width: 480px) {
+      padding: 2em 1em 4em 1em;
+
+      section.main {
+         &.top {
+            flex-direction: column;
+            margin-bottom: 4em;
+
+            h1 {
+               margin-bottom: 1em;
+               text-align: center;
             }
          }
       }

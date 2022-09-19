@@ -5,9 +5,15 @@ export interface IPlan {
    price: number,
    infoPara: string,
    infoList: IHList[],
+   infoDetails: IDetails
    offerPagePara: string,
    offerPageHeader: string,
-   courseAside: IAsideCourse[]
+   courseAside: IAsideCourse[],
+}
+
+export interface IDetails {
+   language: string,
+   lastUpdated: string
 }
 
 export interface IAsideCourse {

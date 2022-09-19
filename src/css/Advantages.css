@@ -1,5 +1,5 @@
 section.advantages {
-  height: 100vh;
+  min-height: 100vh;
   padding: 1em;
   display: flex;
   justify-content: center;
@@ -12,13 +12,15 @@ section.advantages section.cards {
   align-items: center;
   margin-top: 6em;
   width: 100%;
+  flex-wrap: wrap;
   align-items: stretch;
 }
 section.advantages section.cards article.card {
   background: whitesmoke;
   padding: 1em;
   border-radius: 0.25em;
-  width: 22%;
+  width: 330px;
+  margin: 0.25em;
   text-align: center;
   display: flex;
   justify-content: space-between;
@@ -47,14 +49,14 @@ section.advantages section.cards article.card h3 {
 }
 section.advantages section.cards article.card p {
   margin-bottom: 2.5em;
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 4vw, 1rem);
   font-weight: 700;
   font-family: "Comfortaa", cursive;
 }
 section.advantages section.cards article.card span.icon {
   display: block;
-  height: 80px;
-  width: 80px;
+  height: clamp(50px, 15vw, 80px);
+  width: clamp(50px, 15vw, 80px);
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -75,7 +77,15 @@ section.advantages div.text h2 {
   font-weight: 600;
 }
 section.advantages div.text h1 {
-  font-size: 3rem;
+  font-size: clamp(2rem, 6vw, 3rem);
   font-weight: 200;
   color: rgb(83, 83, 83);
+}
+@media (max-width: 480px) {
+  section.advantages {
+    padding: 0.25em;
+  }
+  section.advantages section.cards {
+    margin-top: 2em;
+  }
 }

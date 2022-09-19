@@ -10,11 +10,12 @@ header.homepage-header {
    article.text-container {
       position: relative;
       z-index: 3;
-      width: 40%;
-      margin-left: 5em;
+      width: 600px;
+      margin-left: clamp(1em, 6vw, 5em);
+      max-width: 90%;
 
       h1 {
-         font-size: 3.5rem;
+         @include Clamp(2, 8, 3.5);
          font-weight: 700;
          font-family: 'Comfortaa', cursive;
       }
@@ -23,24 +24,26 @@ header.homepage-header {
          &.small {
             font-weight: 600;
             color: black;
-            font-size: 1rem;
+            @include Clamp(.85, 4, 1);
             margin-bottom: .75em;
          }
 
          &.big {
-            font-size: 1.1rem;
+            @include Clamp(.9, 4, 1.1);
             color: black;
             margin-bottom: 3em;
             margin-top: .25em;
             font-weight: 400;
             border-left: 3px solid royalblue;
             padding-left: .5em;
+
+            @media (max-width: 480px) { margin-top: 1em; }
          }
       }
 
       div.buttons-container {
          button {
-            padding: 1.25em 2.5em;
+            padding: clamp(.5em, 5vw, 1.25em) clamp(1.5em, 5vw, 2.5em);
             outline: 0;
             border: 0;
             border-radius: .4em;
@@ -49,7 +52,7 @@ header.homepage-header {
 
             label {
                color: $clr-white;
-               font-size: 1rem;
+               @include Clamp(.85, 4, 1);
                font-family: 'Sora', sans-serif;
                font-weight: 600;
             }

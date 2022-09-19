@@ -4,6 +4,7 @@ import '../../css/Course.css'
 import Plans from '../../data/Plans'
 import { defaultCourseHook, defaultVerifyHook, ICourseHook, ICourseState, IVerifyHook } from '../../interfaces/CoursePageInterfaces'
 import Aside from './Aside/Aside'
+import ExpandArrow from './Aside/ExpandArrow'
 import Content from './Content/Content'
 
 const COURSE_PAGE = () => {
@@ -54,6 +55,8 @@ const COURSE_PAGE = () => {
    
             <Aside type={type} courseList={courseAside} />
             <Content lessonContent={selectedLesson} />
+
+            <ExpandArrow />
    
          </main>
       )

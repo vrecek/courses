@@ -4,6 +4,9 @@ aside.aside-section {
    width: 25%;
    background: #303030;
    color: $clr-white;
+   position: relative;
+   transition: .3s;
+   z-index: 99;
 
    ul.outer-ul {
       list-style: none;
@@ -72,6 +75,31 @@ aside.aside-section {
          margin-right: .75em;
 
          svg { @include FullSize; }
+      }
+   }
+
+   @media (max-width: 768px) {
+      position: fixed;
+      left: 0;
+      transform: translateX(-100%);
+      top: 0;
+      width: 300px;
+      max-width: 100%;
+      height: 100vh;
+      overflow-y: scroll;
+
+      &::-webkit-scrollbar {
+         width: 4px;
+         background: grey;
+      }
+
+      &::-webkit-scrollbar-thumb {
+         width: 100%;
+         background: royalblue;
+      }
+
+      span.arrow-icon {
+         display: block;
       }
    }
 }

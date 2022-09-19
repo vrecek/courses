@@ -3,6 +3,16 @@ main.content {
   background: rgb(250, 250, 250);
   padding: 1.5em;
 }
+main.content main.lesson:not(.no-selected) section.code-box section::-webkit-scrollbar {
+  height: 8px;
+  width: 100%;
+  background: grey;
+}
+main.content main.lesson:not(.no-selected) section.code-box section::-webkit-scrollbar-thumb {
+  height: 100%;
+  border-radius: 1em;
+  background: black;
+}
 main.content main.lesson:not(.no-selected) section.finish {
   margin-top: 5em;
 }
@@ -87,4 +97,17 @@ main.content section.lesson.no-selected div.cancel button label {
 }
 main.content section.lesson.no-selected div.cancel button:hover {
   background: red;
+}
+@media (max-width: 768px) {
+  main.content {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  main.content {
+    padding: 1.5em 0.5em;
+  }
+  main.content figure.code-image {
+    width: 100% !important;
+  }
 }

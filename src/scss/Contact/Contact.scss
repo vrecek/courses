@@ -20,7 +20,7 @@ main.contact {
 
    form,
    article {
-      width: 35%;
+      width: 37%;
       height: 93%;
    }
 
@@ -34,7 +34,7 @@ main.contact {
             margin-bottom: 1.5em;
             
             span.icon {
-               @include Rectangle(40px);
+               @include Rectangle(clamp(25px, 6vw, 40px));
                margin-right: 1em;
 
                svg {
@@ -43,6 +43,11 @@ main.contact {
             }
 
             div.text {
+               h5,
+               p {
+                  @include Clamp(.9, 4, 1);
+               }
+
                h5 {
                   color: rgb(9, 163, 9);
                   font-weight: 600;
@@ -62,7 +67,7 @@ main.contact {
          margin-top: 3em;
 
          li {
-            @include Rectangle(40px);
+            @include Rectangle(clamp(30px, 6vw, 40px));
             border: 2px solid black;
             margin-right: 1em;
             cursor: pointer;
@@ -90,11 +95,12 @@ main.contact {
 
          p.entry {
             margin-top: 1em;
+            @include Clamp(.9, 4, 1);
             font-weight: 500;
          }
    
          h1 {
-            font-size: 3rem;
+            @include Clamp(1.5, 6, 3);
             font-weight: 700;
             font-family: 'Comfortaa', cursive;
          }
@@ -104,12 +110,13 @@ main.contact {
    form {
       background: white;
       border-radius: .3em;
-      padding: 2em;
+      padding: 2em clamp(.5em, 6vw, 2em);
       position: relative;
 
       button {
          padding: .75em 0;
          width: 30%;
+         min-width: 110px;
          outline: 0;
          border: 2px solid #303030;
          cursor: pointer;
@@ -121,7 +128,7 @@ main.contact {
 
          h6 {
             position: absolute;
-            top: 130%;
+            top: 120%;
             left: 0;
             width: max-content;
             font-size: .9rem;
@@ -155,6 +162,7 @@ main.contact {
             font-family: 'Comfortaa', cursive;
             font-weight: 700;
             height: 30vh;
+            @include Clamp(.85, 4, 1);
          }
       }
 
@@ -169,8 +177,33 @@ main.contact {
             border-bottom: 2px solid #303030;
             font-family: 'Comfortaa', cursive;
             font-weight: 700;
+            @include Clamp(.85, 4, 1);
          }
       }
    }
 
+   @media (max-width: 768px) {
+      height: auto;
+      padding: 2em 1em;
+      flex-direction: column;
+
+      figure {
+         display: none;
+      }
+
+      form,
+      article {
+         width: 100%;
+      }
+
+      article {
+         div.text-entry {
+            margin-bottom: 2em;
+         }
+      }
+
+      form {
+         margin-top: 3em;
+      }
+   }
 }

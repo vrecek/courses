@@ -23,7 +23,7 @@ main.contact figure img {
 }
 main.contact form,
 main.contact article {
-  width: 35%;
+  width: 37%;
   height: 93%;
 }
 main.contact article {
@@ -40,13 +40,17 @@ main.contact article section.informations div.detail {
 }
 main.contact article section.informations div.detail span.icon {
   display: block;
-  height: 40px;
-  width: 40px;
+  height: clamp(25px, 6vw, 40px);
+  width: clamp(25px, 6vw, 40px);
   margin-right: 1em;
 }
 main.contact article section.informations div.detail span.icon svg {
   width: 100%;
   height: 100%;
+}
+main.contact article section.informations div.detail div.text h5,
+main.contact article section.informations div.detail div.text p {
+  font-size: clamp(0.9rem, 4vw, 1rem);
 }
 main.contact article section.informations div.detail div.text h5 {
   color: rgb(9, 163, 9);
@@ -63,8 +67,8 @@ main.contact article ul {
 }
 main.contact article ul li {
   display: block;
-  height: 40px;
-  width: 40px;
+  height: clamp(30px, 6vw, 40px);
+  width: clamp(30px, 6vw, 40px);
   border: 2px solid black;
   margin-right: 1em;
   cursor: pointer;
@@ -93,22 +97,24 @@ main.contact article div.text-entry {
 }
 main.contact article div.text-entry p.entry {
   margin-top: 1em;
+  font-size: clamp(0.9rem, 4vw, 1rem);
   font-weight: 500;
 }
 main.contact article div.text-entry h1 {
-  font-size: 3rem;
+  font-size: clamp(1.5rem, 6vw, 3rem);
   font-weight: 700;
   font-family: "Comfortaa", cursive;
 }
 main.contact form {
   background: white;
   border-radius: 0.3em;
-  padding: 2em;
+  padding: 2em clamp(0.5em, 6vw, 2em);
   position: relative;
 }
 main.contact form button {
   padding: 0.75em 0;
   width: 30%;
+  min-width: 110px;
   outline: 0;
   border: 2px solid #303030;
   cursor: pointer;
@@ -120,7 +126,7 @@ main.contact form button {
 }
 main.contact form button h6 {
   position: absolute;
-  top: 130%;
+  top: 120%;
   left: 0;
   width: max-content;
   font-size: 0.9rem;
@@ -154,6 +160,7 @@ main.contact form div.textarea textarea {
   font-family: "Comfortaa", cursive;
   font-weight: 700;
   height: 30vh;
+  font-size: clamp(0.85rem, 4vw, 1rem);
 }
 main.contact form div.input {
   margin-bottom: 2em;
@@ -166,4 +173,25 @@ main.contact form div.input input {
   border-bottom: 2px solid #303030;
   font-family: "Comfortaa", cursive;
   font-weight: 700;
+  font-size: clamp(0.85rem, 4vw, 1rem);
+}
+@media (max-width: 768px) {
+  main.contact {
+    height: auto;
+    padding: 2em 1em;
+    flex-direction: column;
+  }
+  main.contact figure {
+    display: none;
+  }
+  main.contact form,
+main.contact article {
+    width: 100%;
+  }
+  main.contact article div.text-entry {
+    margin-bottom: 2em;
+  }
+  main.contact form {
+    margin-top: 3em;
+  }
 }

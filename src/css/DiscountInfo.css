@@ -1,16 +1,16 @@
 section.discount-info {
-  height: 100vh;
-  padding: 2em;
+  padding: 6em 2em 8em 2em;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  position: relative;
 }
 section.discount-info section.discount-text {
   width: 40%;
 }
 section.discount-info section.discount-text h1 {
   font-weight: 600;
-  font-size: 3.25rem;
+  font-size: clamp(2rem, 8vw, 3.25rem);
 }
 section.discount-info section.discount-text p {
   font-family: "Comfortaa", cursive;
@@ -18,6 +18,7 @@ section.discount-info section.discount-text p {
   color: #606060;
   line-height: 1.75em;
   margin: 1em 0 2em 0;
+  font-size: clamp(0.9rem, 4vw, 1rem);
 }
 section.discount-info section.discount-text button {
   cursor: pointer;
@@ -74,4 +75,38 @@ section.discount-info figure.discount-image figure {
 }
 section.discount-info figure.discount-image figure img {
   width: 100%;
+}
+@media (max-width: 768px) {
+  section.discount-info {
+    color: rgb(245, 245, 245);
+    margin-top: 2em;
+  }
+  section.discount-info section.discount-text {
+    width: 100%;
+  }
+  section.discount-info section.discount-text h1 {
+    text-shadow: 0 0 2px black;
+  }
+  section.discount-info section.discount-text p {
+    color: rgb(245, 245, 245);
+  }
+  section.discount-info figure.discount-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: auto;
+    right: auto;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  section.discount-info figure.discount-image figure {
+    width: 100%;
+    height: 100%;
+  }
+  section.discount-info figure.discount-image figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }

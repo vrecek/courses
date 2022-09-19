@@ -16,10 +16,11 @@ nav.layout-navigation {
       li {
          margin-left: 2em;
          font-weight: 500;
-         font-size: .9rem;
+         @include Clamp(.75, 2.5, .9);
          transition: .3s;
          cursor: pointer;
          position: relative;
+         text-align: center;
 
          &:not(.register):not(.login):not(.logout):not(.plan) {
             &:before {
@@ -86,6 +87,38 @@ nav.layout-navigation {
 
       img {
          height: 100%;
+      }
+   }
+
+   @media (max-width: 768px) {
+      justify-content: flex-end;
+
+      figure.logo { display: none; }
+   }
+
+   @media (max-width: 480px) {
+      padding: .25em .5em .25em .5em;
+
+      ul.list {
+         li {
+            margin-left: 0;
+
+            &.logout,
+            &.register {
+               margin-left: 1.5em;
+            }
+
+            &.plan {
+               border-radius: 1em;
+               width: max-content;
+               margin-left: 1em;
+            }
+
+            &:nth-child(2),
+            &:nth-child(3) {
+               display: none;
+            }
+         }
       }
    }
 }
