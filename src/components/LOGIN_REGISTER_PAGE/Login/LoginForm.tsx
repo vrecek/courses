@@ -70,7 +70,7 @@ const LoginForm = () => {
          appendResponse(ar, 'Successfully logged in', btn)
          window.localStorage.setItem('user_logged', JSON.stringify(doesExist.user))
 
-         setTimeout(() => window.location.href = '/', 500)
+         setTimeout(() => window.location.href = '/courses', 500)
       }, 1000)
    }
 

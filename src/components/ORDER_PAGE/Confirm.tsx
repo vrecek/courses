@@ -47,7 +47,7 @@ const Confirm = ({type, price, para, id}: IConfirm) => {
          window.localStorage.setItem('users', JSON.stringify(allUsers))
 
          l.remove()
-         window.location.href = '/'
+         window.location.href = '/courses'
       }, 2000)
    }
 

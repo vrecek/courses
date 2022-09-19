@@ -24,7 +24,7 @@ const NoLessonSelected = () => {
          window.localStorage.setItem('user_logged', JSON.stringify(loggedUser))
          window.localStorage.setItem('users', JSON.stringify(allUsers))
 
-         window.location.href = '/'
+         window.location.href = '/courses'
       }, 2000);
    }
 

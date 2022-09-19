@@ -44,7 +44,7 @@ const List = () => {
       window.localStorage.setItem('users', JSON.stringify(allUsers))
       window.localStorage.removeItem('user_logged')
 
-      window.location.href = '/'
+      window.location.href = '/courses'
    }
 
    const list: INavLinks[] = [
