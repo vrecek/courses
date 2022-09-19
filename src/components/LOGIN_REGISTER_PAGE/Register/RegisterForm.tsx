@@ -52,7 +52,6 @@ const RegisterForm = () => {
       
       const t: HTMLFormElement = e.target as HTMLFormElement
       const elements: HTMLInputElement[] = Array.from(t.elements as Inputs)
-      const btn: HTMLElement = elements[elements.length - 1]
 
       const values: string[] = elements.map(x => x.value)
       const ar: AppendResult = new AppendResult('h6', 'failure')
@@ -69,7 +68,7 @@ const RegisterForm = () => {
          l.remove()
 
          if(msg) {
-            appendResponse(ar, msg, btn)
+            appendResponse(ar, msg, t)
             return
          }
    
@@ -88,12 +87,12 @@ const RegisterForm = () => {
          const doesExist: IExist = doesUserExist(actualUsers, User.username, User.mail)
    
          if(doesExist.exists) {
-            appendResponse(ar, doesExist.msg, btn)
+            appendResponse(ar, doesExist.msg, t)
             return
          }
    
          window.localStorage.setItem('users', JSON.stringify([...actualUsers, User]))
-         appendResponse(ar, 'Successfully created! You can sign in now', btn, 'success')
+         appendResponse(ar, 'Successfully created! You can sign in now', t, 'success')
       }, 1000)
    }
 

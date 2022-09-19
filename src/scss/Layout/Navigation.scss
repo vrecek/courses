@@ -101,8 +101,6 @@ nav.layout-navigation {
 
       ul.list {
          li {
-            margin-left: 0;
-
             &.logout,
             &.register {
                margin-left: 1.5em;
@@ -114,8 +112,8 @@ nav.layout-navigation {
                margin-left: 1em;
             }
 
-            &:nth-child(2),
-            &:nth-child(3) {
+            &.login,
+            &.contact {
                display: none;
             }
          }

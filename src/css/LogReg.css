@@ -48,6 +48,35 @@ main.login main.wrap form.form {
   flex-direction: column;
   position: relative;
 }
+main.register main.wrap form.form h6.failure,
+main.register main.wrap form.form h6.success,
+main.login main.wrap form.form h6.failure,
+main.login main.wrap form.form h6.success {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: auto;
+  right: auto;
+  width: 100%;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 0.75em 0;
+  color: rgb(245, 245, 245);
+  word-spacing: 2px;
+}
+main.register main.wrap form.form h6.failure.failure,
+main.register main.wrap form.form h6.success.failure,
+main.login main.wrap form.form h6.failure.failure,
+main.login main.wrap form.form h6.success.failure {
+  background: red;
+}
+main.register main.wrap form.form h6.failure.success,
+main.register main.wrap form.form h6.success.success,
+main.login main.wrap form.form h6.failure.success,
+main.login main.wrap form.form h6.success.success {
+  background: rgb(10, 164, 10);
+}
 main.register main.wrap form.form div.wrap,
 main.login main.wrap form.form div.wrap {
   width: 70%;
@@ -79,27 +108,6 @@ main.login main.wrap form.form div.wrap button {
   cursor: pointer;
   transition: 0.3s;
   position: relative;
-}
-main.register main.wrap form.form div.wrap button h6,
-main.login main.wrap form.form div.wrap button h6 {
-  position: absolute;
-  left: 50%;
-  top: 105%;
-  bottom: auto;
-  right: auto;
-  width: 100%;
-  transform: translateX(-50%);
-  font-size: 0.9rem;
-  font-weight: 500;
-  word-spacing: 2px;
-}
-main.register main.wrap form.form div.wrap button h6.failure,
-main.login main.wrap form.form div.wrap button h6.failure {
-  color: red;
-}
-main.register main.wrap form.form div.wrap button h6.success,
-main.login main.wrap form.form div.wrap button h6.success {
-  color: rgb(10, 164, 10);
 }
 main.register main.wrap form.form div.wrap button label,
 main.login main.wrap form.form div.wrap button label {
@@ -214,7 +222,7 @@ main.login form.login-form section.options div.remember-div input {
 }
 main.login form.login-form section.options h6,
 main.login form.login-form section.options label {
-  font-size: clamp(0.8rem, 4vw, 0.85rem);
+  font-size: clamp(0.75rem, 4vw, 0.85rem);
   font-weight: 600;
   cursor: pointer;
 }
@@ -235,6 +243,10 @@ main.login {
 main.login main.wrap {
     flex-direction: column-reverse;
   }
+  main.register main.wrap button,
+main.login main.wrap button {
+    margin-bottom: 0.75em;
+  }
   main.register main.wrap form.form,
 main.register main.wrap section.image,
 main.login main.wrap form.form,
@@ -250,7 +262,7 @@ main.login main.wrap form.form {
 @media (max-width: 480px) {
   main.register,
 main.login {
-    padding: 1.5em 0;
+    padding: 1.5em 0.5em;
   }
   main.register main.wrap form.form div.wrap,
 main.login main.wrap form.form div.wrap {

@@ -101,9 +101,6 @@ nav.layout-navigation figure.logo img {
   nav.layout-navigation {
     padding: 0.25em 0.5em 0.25em 0.5em;
   }
-  nav.layout-navigation ul.list li {
-    margin-left: 0;
-  }
   nav.layout-navigation ul.list li.logout, nav.layout-navigation ul.list li.register {
     margin-left: 1.5em;
   }
@@ -112,7 +109,7 @@ nav.layout-navigation figure.logo img {
     width: max-content;
     margin-left: 1em;
   }
-  nav.layout-navigation ul.list li:nth-child(2), nav.layout-navigation ul.list li:nth-child(3) {
+  nav.layout-navigation ul.list li.login, nav.layout-navigation ul.list li.contact {
     display: none;
   }
 }

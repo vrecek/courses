@@ -50,9 +50,10 @@ const List = () => {
    const list: INavLinks[] = [
       { text: 'Homepage', action: () => n('/') },
       { text: 'Offer', action: () => n('/offer') },
-      { text: 'Contact', action: () => n('/contact') },
+      { text: 'Contact', action: () => n('/contact'), cname: 'contact' },
    ]
 
+   if(user?.plan) list.splice(1, 1)
    pushUserLinks()
    pushPlanLinks()   
    

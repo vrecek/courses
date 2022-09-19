@@ -50,7 +50,6 @@ const LoginForm = () => {
 
       const t: HTMLFormElement = e.target as HTMLFormElement
       const elements: HTMLInputElement[] = Array.from(t.elements as Inputs)
-      const btn: HTMLElement = elements[elements.length - 1]
 
       const ar: AppendResult = new AppendResult('h6', 'success')
       const doesExist: IRegistered = isRegistered(elements[0].value, elements[1].value)
@@ -63,11 +62,11 @@ const LoginForm = () => {
          l.remove()
 
          if(!doesExist.exists) {
-            appendResponse(ar, 'Username or password is incorrect', btn, 'failure')
+            appendResponse(ar, 'Username or password is incorrect', t, 'failure')
             return
          }
    
-         appendResponse(ar, 'Successfully logged in', btn)
+         appendResponse(ar, 'Successfully logged in', t)
          window.localStorage.setItem('user_logged', JSON.stringify(doesExist.user))
 
          setTimeout(() => window.location.href = '/courses', 500)
