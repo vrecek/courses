@@ -19,6 +19,11 @@ export interface IRef {
    reference: Ref
 }
 
+export interface IViewport {
+   inViewport: boolean,
+   forwardedRef: any
+}
+
 export type HE = HTMLCollectionOf<HTMLElement>
 export type Inputs = HTMLCollectionOf<HTMLInputElement>
 export type PossibleUser = UserType | null

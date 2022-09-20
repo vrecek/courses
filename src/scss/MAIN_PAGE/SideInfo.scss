@@ -6,6 +6,7 @@ section.side-info {
 
    figure.image-div {
       width: 50%;
+      transition: 1.5s;
 
       figure {
          @include FullSize;
@@ -19,6 +20,7 @@ section.side-info {
 
    article.text-container {
       width: 40%;
+      transition: 1.5s;
 
       h2 {
          font-family: 'Comfortaa', cursive;
@@ -68,6 +70,9 @@ section.side-info {
    }
 
    &.first {
+      article.text-container { transform: translateX(-200%); }
+      figure.image-div { transform: translateX(200%); }
+
       p {
          padding: 1.75em .25em 2em .25em;
       }
@@ -78,6 +83,9 @@ section.side-info {
    }
 
    &.second {
+      article.text-container { transform: translateX(200%); }
+      figure.image-div { transform: translateX(-200%); }
+
       section.cards {
          @include Flex(sb, c);
          margin-top: 3em;

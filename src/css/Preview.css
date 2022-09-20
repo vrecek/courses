@@ -9,6 +9,7 @@ section.preview article.text,
 section.preview section.slider {
   width: 460px;
   max-width: 46%;
+  transition: 1.5s;
 }
 section.preview article.text {
   border-left: 3px solid purple;
@@ -19,6 +20,7 @@ section.preview article.text {
   justify-content: space-between;
   align-items: none;
   flex-direction: column;
+  transform: translateX(-200%);
 }
 section.preview article.text ul {
   display: flex;
@@ -52,6 +54,7 @@ section.preview article.text p {
 }
 section.preview section.slider {
   position: relative;
+  transform: translateX(200%);
 }
 section.preview section.slider ul {
   position: absolute;

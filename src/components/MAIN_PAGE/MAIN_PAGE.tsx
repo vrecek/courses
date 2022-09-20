@@ -7,18 +7,23 @@ import Preview from './Preview/Preview'
 import Pros from './Pros/Pros'
 import Opinions from './Opinions/Opinions'
 import Usage from './Usage/Usage'
+import handleViewport from 'react-in-viewport'
 
 const MAIN_PAGE = () => {
    window.scrollTo(0, 0)
+
+   const VFirstSideInfo = handleViewport(FirstSideInfo)
+   const VSecondSideInfo = handleViewport(SecondSideInfo)
+   const VPreview = handleViewport(Preview)
    
    return (
       <main className="main-page">
 
          <Header />
-         <FirstSideInfo />
-         <SecondSideInfo />
+         <VFirstSideInfo />
+         <VSecondSideInfo />
          <Pricing />
-         <Preview />
+         <VPreview />
          <Pros />
          <Usage />
          <Opinions />
